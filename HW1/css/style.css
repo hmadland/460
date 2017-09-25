@@ -2,6 +2,13 @@
   color: #FFFFFF;
 }
 
+p{
+    padding-left: 40px;
+}
+
+h2{
+    padding-left: 40px;
+}
 
 body{
   background-color: #363434
