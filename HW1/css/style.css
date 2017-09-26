@@ -2,6 +2,10 @@
   color: #FFFFFF;
 }
 
+#BoldG{
+  color: #FFCA38
+}
+
 #padL{
     padding-left: 40px;
 }
@@ -12,10 +16,6 @@ h2{
 
 body{
   background-color: #363434
-}
-
-table{
-  float: left;
 }
 
 #myNavbar{
