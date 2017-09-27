@@ -18,39 +18,120 @@
       <h2 id="BoldB">Homework 1</h2>
       <p> The first homework assignment tasked us with learning the basics of HTML, CSS, Bootstrap, and Git.
         The assignment instructions can be found <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html">here</a>.
-        Essentially we have been asked to build a set of web pages.
+        Essentially we have been asked to build a set of web pages and this portfolio to show future assignments.
       </p>
 
+    <h3>Git</h3>
       <p> The first step was downloading Git, and making accounts on both GitHub and BitBucket.Once that was done I created a repo on GitHub
-        and cloned a copy to my machine. From there I created a folder of a few html files and pushed that to the remote server.
+        and cloned a copy to my machine.
+      <h3>HTML, CSS, Bootstrap</h3>
+      <p>From there it was simply a matter of puting together a few html files to complete the set of web pages and making
+        sure they matched the assignment's specifications, and push them to the remote repo. I used w3schools to help when I
+        ran into any problems with html, css and bootstrap and ran through a few git tutorials.
       </p>
+      <h3>Issues</h3>
+      <p>The only problem I ran into was when I unessisarily made a branch and had to merge it back with the master. It had a merge conflict and had to manually pick between two files </p>
 
-
-      <div><pre class="highlight">
-      <code><span>
-        git add -A
-        git commit -m "first commit"
-        git push origin master
-    </span></code></pre>
-      </div>
-
-      <p>From there it was simply a matter of puting together a few more html files to complete the set of web pages and making sure they matched the assignments specifications.</p>
-      <p>Once the pages were complete I pushed them to my remote repo and began working on the pages for this portfolio</p>
-      <p>After they were complete I pushed them as well and made sure everything liked correctly.</p>
+      <h3>Finishing Up</h3>
+      <p>Once the pages were complete I began working on the pages for this portfolio, and fter they were finished I pushed them as well and made sure everything linked correctly.</p>
       <p>You can view the completed site created for HW1 <a href="HW1/index.html" target="_blank">here</a></p>
       <p>All code used in the site is shown below</p>
 
+      <div><pre class="highlight"> <code><xmp><!DOCTYPE html>
+        <html>
+          <head>
+            <title>Marvel</title>
+            <link rel="stylesheet" href="css/bootstrap.css">
+            <link rel="stylesheet" href="css/style.css">
 
-      <div><pre class="highlight">
-      <code><span>
+            <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="phoenix.html">Phoenix</a></li>
+              <li><a href="wolverine.html">Wolverine</a></li>
+              <li><a href="shadowcat.html">Shadowcat</a></li>
+              <li><a href="cyclops.html">Cyclops</a></li>
+              <li><a href="storm.html">Storm</a></li>
+              <li><a href="nightcrawler.html">Nightcrawler</a></li>
+              <li><a href="enemies.html">Enemies</a></li>
+           </ul>
+         </div>
+        </div>
+        </nav>
 
+        </head>
 
-    </span></code></pre>
+          <body>
+            <div id="BoldW" class="text-center">
+              <h1>X-MEN</h1>
+              <br>
+            </div>
+
+          <div class="container-fluid text-center">
+          <div class="row">
+
+            <div class="col-sm-4">
+            <a href="phoenix.html">
+              <img src="img/grey.jpg" height="240" alt="Image">
+              <p id=BoldW>Phoenix</p>
+              </a>
+            </div>
+
+            <div class="col-sm-4">
+              <a href="wolverine.html">
+              <img src="img/wolverine.jpg" height="240" alt="Image">
+                <p id=BoldW >Wolverine</p>
+              </a>
+            </div>
+
+            <div class="col-sm-4">
+              <a href="shadowcat.html">
+              <img src="img/shadowcat.jpg" height="240" alt="Image">
+                <p id=BoldW >Shadowcat</p>
+              </a>
+            </div>
+          </div>
+          </div>
+        <!--newrow-->
+         <div class="container-fluid text-center"><br>
+          <div class="row">
+
+            <div class="col-sm-4">
+              <a href="cyclops.html">
+              <img src="img/cyclops.jpg" height="240" alt="haskell">
+                <p id=BoldW >Cyclops</p>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a href="storm.html">
+              <img src="img/storm.jpg" height="240" alt="haskell">
+                <p id=BoldW >Storm</p>
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a href="nightcrawler.html">
+              <img src="img/nightcrawler.jpg" height="240" alt="haskell">
+                <p id=BoldW >NightCrawler</p>
+              </a>
+            </div>
+        </div>
+        </div><br>
+          <footer class="container-fluid text-center">
+          </footer>
+          </body>
+        </div>
+      </html> </xmp></code></pre>
       </div>
 
-
-
     </section>
-
   </body>
   </html>
