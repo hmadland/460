@@ -1,0 +1,20 @@
+#padL{
+    padding-left: 50px;
+}
+
+
+#BoldB{
+    color: #000000;
+    font-weight:bold;
+  }
+
+
+
+body{
+  background-color:#C7CED1
+}
+
+section{
+  padding-left:300px;
+  padding-right:300px;
+}
