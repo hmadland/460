@@ -4,14 +4,33 @@
 
 
 #BoldB{
-    color: #000000;
+    color: #FFFFFF;
     font-weight:bold;
+  }
+
+  #color{
+  color: #eae8ff;
+  font-weight:bold;
+  }
+
+  h3{
+    color:#FFFFFF;
+    font-weight:bold;
+  }
+
+  p{
+    color: #eae8ff;
+    font-weight:bold;
+  }
+
+  a{
+      color: #afefff;
   }
 
 
 
 body{
-  background-color:#C7CED1
+  background-color:#2c3f5e
 }
 
 section{
