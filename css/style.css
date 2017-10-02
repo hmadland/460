@@ -1,14 +1,13 @@
-#padL{
+.padL{
     padding-left: 50px;
 }
 
-
-#BoldB{
+.BoldW{
     color: #FFFFFF;
     font-weight:bold;
   }
 
-  #color{
+  .color{
   color: #eae8ff;
   font-weight:bold;
   }
