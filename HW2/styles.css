@@ -1,0 +1,24 @@
+.BoldW{
+  color: #FFFFFF;
+}
+
+.BoldG{
+  color: #FFCA38
+}
+
+.padL{
+    padding-left: 40px;
+}
+
+h2{
+    padding-left: 40px;
+}
+
+body{
+  background-color: #363434
+}
+
+#myNavbar{
+  color: #FFFFFF;
+  text-alin: left;
+}
