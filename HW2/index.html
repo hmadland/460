@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html>
+    <html>
+      <head>
+        <title>To Do List</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="styles.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!--to-do-list- takes task and amount of time outputs nicely style list with check boxes and total time left--->
+<h3>Day Plan</h3>
+<container>
+<div class="container-fluid text-center">
+<div class="row">
+  <div class="col-sm-6">
 
-  <head>
+    <form id="generateList">
+      <span class="BoldB">Task: </span>
+      <input id="todoInput" name="taskName" type="text">
+      <br/><br/>
+      <button type="button" onclick="addTask()">Add Task</button>
+      </form>
+  </div>
+  <div class="col-sm-6">
 
-    <title>Cyclops</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-<!---word counter-->
-<!--- A Countdown Clock-->
-<!----->
-<!----->
-
-
-
+      <ul id="totalTime" class="padL">
+      </ul>
+      <script src="main.js"></script>
+</div>
+</div>
+</div>
+</container>
   </body>
   </html>

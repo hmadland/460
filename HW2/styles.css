@@ -2,8 +2,9 @@
   color: #FFFFFF;
 }
 
-.BoldG{
-  color: #FFCA38
+.BoldB{
+  color: #000000;
+  font-weight: bold;
 }
 
 .padL{
@@ -15,7 +16,7 @@ h2{
 }
 
 body{
-  background-color: #363434
+  background-color: #FFFFFF
 }
 
 #myNavbar{
