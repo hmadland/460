@@ -126,7 +126,6 @@ Below are some code examples from HW1.
   </body>
 </div>
 </html>
-
 ```
 
 
