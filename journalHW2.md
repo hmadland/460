@@ -19,6 +19,8 @@ After the new feature branch was created I made an index.html and styles.css and
 
 ## Layout
 From there I worked on the basic layout I wanted for my dynamic webpage and came up with the wireframe mockup below.
+
+
         <!DOCTYPE html>
             <html>
               <head>
