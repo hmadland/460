@@ -19,45 +19,7 @@ After the new feature branch was created I made an index.html and styles.css and
 
 ## Layout
 From there I worked on the basic layout I wanted for my dynamic webpage and came up with the wireframe mockup below.
-
-
-        <!DOCTYPE html>
-            <html>
-              <head>
-                <title>To Do List</title>
-                <link rel="stylesheet" href="../css/bootstrap.css">
-                <link rel="stylesheet" href="../css/style.css">
-
-        <container>
-        <div class="container-fluid text-center">
-        <div class="row">
-          <div class="col-sm-6">
-
-            <form class="BoldW">
-              <h3 class="BoldW">Day Plan:</h3>
-              <span class="BoldB"></span>
-              <input name="taskName" type="text" class="BoldB">
-              <br/><br/>
-              <button type="button" class="BoldB">Add Task</button>
-            </form>
-          </div>
-          <div class="col-sm-3">
-            <h3>To Do</h3>
-
-              <ul class="padL">
-              </ul>
-          </div>
-
-          <div class="col-sm-3">
-            <h3>Done</h3>
-            <ul  class="padL"></ul>
-          </div>
-
-        </div>
-        </div>
-        </container>
-          </body>
-          </html>
+![](HW2/mockup.PNG?raw=true)
 
 ## jQuery
 Once I had the basic layout I started implementing the jQuery functions.
