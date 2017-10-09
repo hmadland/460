@@ -1,5 +1,5 @@
 ---
-title:  Hannah Madland
+title: Hannah Madland
 layout: default
 ---
 ## Welcome to My Portfolio
