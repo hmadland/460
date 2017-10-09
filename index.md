@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Blogging Like a Hacker
 ---
 ## Welcome to My Portfolio
@@ -13,7 +12,7 @@ This Portfolio is part of the Senior Project, a year-long Software Engineering c
 All the code seen here can be found in the [460 repository](https://github.com/hmadland/460)
 
 Software Engineering I (CS 460): Homework
-* [Homework 1:](https://hmadland.github.io/460/journalHW1.html) HTML, Css, Git and Bootstrap
+* [Homework 1:](https://hmadland.github.io/460/journalHW1.md) HTML, Css, Git and Bootstrap
 * [Homework 2:](https://hmadland.github.io/460/journalHW2.html) Javascript and jQuery
 * [Homework 3:](https://hmadland.github.io/460/journalHW3.html)
 * [Homework 4:](https://hmadland.github.io/460/journalHW4.html)
