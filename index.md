@@ -1,12 +1,15 @@
-# Hannah Madland
+---
+title:  Hannah Madland
+layout: default
+---
 ## Welcome to My Portfolio
 This is a Portfolio of some of my software developed within the senior sequence at Western Oregon University.
 
-## About Me
+### About Me
 I'm a senior at WOU majoring in Computer Science.
 This Portfolio is part of the Senior Project, a year-long Software Engineering course (CS  [460](http://www.wou.edu/~morses/classes/cs46x/index.html), 461 and 462).
 
-## Code Repository
+### Code Repository
 All the code seen here can be found in the [460 repository](https://github.com/hmadland/460)
 
 Software Engineering I (CS 460): Homework
