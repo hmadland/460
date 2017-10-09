@@ -13,7 +13,6 @@
     <p>View my GitHub <a href="https://github.com/hmadland">Profile</a></p>
     </div>
 
-    <section>
     <h2 class="BoldW"> Welcome to My Portfolio</h2>
     <p>This is a Portfolio of some of my software developed within the senior sequence at Western Oregon University.</p>
 
@@ -40,7 +39,5 @@
 
 
 
-
-    </section>
   </body>
   </html>
