@@ -1,6 +1,5 @@
 ---
 title: Hannah Madland
-layout: default
 ---
 ## Welcome to My Portfolio
 This is a Portfolio of some of my software developed within the senior sequence at Western Oregon University.
