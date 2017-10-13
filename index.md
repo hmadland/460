@@ -14,7 +14,7 @@ All the code seen here can be found in the [460 repository](https://github.com/h
 Software Engineering I (CS 460): Homework
 * [Homework 1:](https://hmadland.github.io/460/journalHW1.html) HTML, Css, Git and Bootstrap
 * [Homework 2:](https://hmadland.github.io/460/journalHW2.html) Javascript and jQuery
-* [Homework 3:](https://hmadland.github.io/460/journalHW3.html)
+* [Homework 3:](https://hmadland.github.io/460/journalHW3.html) C# and Visual Studio
 * [Homework 4:](https://hmadland.github.io/460/journalHW4.html)
 * [Homework 5:](https://hmadland.github.io/460/journalHW5.html)
 * [Homework 6:](https://hmadland.github.io/460/journalHW6.html)
