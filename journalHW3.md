@@ -20,6 +20,14 @@ Before starting I reread the slides, and watched a few videos on working with C#
 Below is the console output of the C# post fix calculator.
 ![](img/HW3_3.PNG?raw=true)
 
+Output for unaccepted input
 ![](img/HW3_null.PNG?raw=true)
 
-All code can be found [here]().
+Once things were working I merged back to master with
+```bash
+  git checkout master
+  git merge featureHW3
+  git push origin master
+```
+
+All code can be found [here](https://github.com/hmadland/460).
