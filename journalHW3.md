@@ -3,7 +3,7 @@ title: Homework 3
 layout: default
 ---
 ## Homework 3
-The third assignment tasked us with translating a post fix calculator written in Java into one written in C#.
+The third assignment tasked us with translating a postfix calculator written in Java into one written in C#.
 The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW3.html).
 
 ## New Branch
@@ -17,7 +17,7 @@ They main purpose of the assignment was to get familiar with C# as well as Visua
 Before starting I reread the slides, and watched a few videos on working with C# in Visual Studio. After that it was the slow process of having two windows open and going line by line through the Java code and translating it to C#.
 
 
-Below is the console output of the C# post fix calculator.
+Below is the console output of the C# postfix calculator.
 ![](img/HW3_3.PNG?raw=true)
 
 Output for unaccepted input
