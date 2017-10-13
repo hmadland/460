@@ -1,0 +1,6 @@
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\obj\Debug\HW3.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\bin\Debug\HW3.exe.config
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\bin\Debug\HW3.exe
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\bin\Debug\HW3.pdb
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\obj\Debug\HW3.exe
+C:\Users\pc\Desktop\460\HW3\HW3\HW3\obj\Debug\HW3.pdb
