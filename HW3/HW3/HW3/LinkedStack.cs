@@ -17,7 +17,7 @@
         }
 
         /// <summary>
-        /// Property to get and set Node at the stop of this stack.
+        /// Property to get and set Node at the top of this stack.
         /// </summary>
         public Node TopNode
         {
@@ -34,7 +34,6 @@
         }
 
       
-
         /// <summary>
         /// Check if stack is empty.
         /// </summary>
@@ -43,7 +42,6 @@
         {
             return this.TopNode == null;
         }
-
 
         /// <summary>
         /// Return the top item of this stack but don't remove it.
@@ -69,7 +67,6 @@
             return tempTop;
         }
 
-
         /// <summary>
         /// Push an item onto the top of this stack and return back a reference to that newly pushed item.
         /// </summary>
@@ -87,5 +84,3 @@
         }
     }
 }
-
-]]=

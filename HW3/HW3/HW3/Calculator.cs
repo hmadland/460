@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HW3
 {
@@ -15,12 +11,10 @@ namespace HW3
         /// </summary>
         class Calculator
         {
-            /**
-             * Our data structure used to hold the operands for the postfix calculation.
-             */
+            // Our data structure used to hold the operands for the postfix calculation.
+           
             private IStackADT stack = new LinkedStack();
    
- 
             private IStackADT Stack
             {
                 get { return stack; }
@@ -39,7 +33,7 @@ namespace HW3
                 {
                     calculateAgain = calc.Calculate();
                 }
-                Console.Write("Thank you for feeding me. Goodbye.");
+                Console.Write("Bye.");
             }
 
             /// <summary>
@@ -49,7 +43,7 @@ namespace HW3
             /// <returns>True if a calculation succeeded, false if the usere wishes to quit.</returns>
             private bool Calculate()
             {
-                Console.Write("\nPlease enter q to quit\n\n> ");
+                Console.Write("\nEnter q to quit\n\n> ");
                 string input, output = "";
 
                 input = Console.ReadLine();
@@ -113,7 +107,7 @@ namespace HW3
                 } // end foreach
                   // Bug fix: If only one thing left on stack, that is the answer, otherwise the user input the wrong number of operators
                 if (stackCount > 1)
-                    throw new ArgumentException("Input Error: Improper operand to operator ratio.");
+                    throw new ArgumentException("Input Error: Wrong operand to operator ratio.");
                 return Stack.Pop().ToString();
             }
 
@@ -148,9 +142,9 @@ namespace HW3
                     }
                 }
                 else
-                    throw new ArgumentException("Improper operator: " + v + ", is not one of +, -, *, or /");
+                    throw new ArgumentException("Improper operator: " + v + ", is not  +, -, *, or /");
 
-                stackCount--; // operation successful, so will have one less item on stack
+                stackCount--; // operation successful, one less item on stack
                 return c;
             }
         } // end class Calculator
