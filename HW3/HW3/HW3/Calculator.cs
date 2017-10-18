@@ -88,7 +88,7 @@ namespace HW3
                         Stack.Push((s));
                         stackCount++;
                     }
-                    else // Must be an operator or some other character or word.
+                    else // Must be operator or some other character or word.
                     {
                         if (var.Length > 1)
                             throw new ArgumentException("Input Error: " + var + " is not an allowed number or operator");
@@ -115,7 +115,7 @@ namespace HW3
             /// <param name="a">First operand</param>
             /// <param name="b">Second operand</param>
             /// <param name="s">Operator</param>
-            /// <param name="count">Number of items on stack, passed by reference.</param>
+            /// <param name="count">Number of items on stack.</param>
             /// <returns>The answer</returns>
             private double DoOperation(double a, double b, string s, ref int count)
             {

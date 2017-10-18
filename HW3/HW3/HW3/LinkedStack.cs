@@ -67,7 +67,7 @@
         }
 
         /// <summary>
-        ///  Empty this stack.
+        ///  Empty stack.
         /// </summary>
         public void Clear()
         {
