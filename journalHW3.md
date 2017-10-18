@@ -21,7 +21,7 @@ Below is the console output of the C# postfix calculator.
 ![](img/HW3.PNG?raw=true)
 
 Output for unaccepted input
-![](img/HW3_improper.PNG?raw=true)
+![](img/HW3_inproper.PNG?raw=true)
 
 Once things were working I merged back to master with
 ```bash
