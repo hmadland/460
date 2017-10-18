@@ -15,9 +15,9 @@ namespace HW3
            
             private IStackADT stack = new LinkedStack();
    
-            private IStackADT Stack
+           private IStackADT Stack
             {
-                get { return stack; }
+              get { return stack; }
             }
 
             /// <summary>
@@ -28,7 +28,7 @@ namespace HW3
             {
                 Calculator calc = new Calculator();
                 bool calculateAgain = true;
-                Console.Write("Postfix Calculator.\nRecognized operators: + - * /");
+                Console.Write("\nPostfix Calculator. Recognizes these operators: + - * / \n");
                 while (calculateAgain)
                 {
                     calculateAgain = calc.Calculate();
@@ -43,25 +43,25 @@ namespace HW3
             /// <returns>True if a calculation succeeded, false if the usere wishes to quit.</returns>
             private bool Calculate()
             {
-                Console.Write("\nEnter q to quit\n\n> ");
+                Console.Write("Please enter q to quit\n ");
                 string input, output = "";
 
                 input = Console.ReadLine();
-                // See if user wishes to quit.
+                // See if user wants to quit.
                 if (input.Trim().ToLower().StartsWith("q"))
                 {
                     return false;
                 }
-                // Go ahead with calculation
+                // do calculation
                 try
                 {
                     output = EvaluatePostFixInput(input);
                 }
-                catch (ArgumentException ex)
+                catch (ArgumentException x)
                 {
-                    output = ex.Message;
+                    output = x.Message;
                 }
-                Console.Write("\n\t>>> " + input + " = " + output);
+                Console.Write("\n\t>>> " + input + " = " + output +  "\n");
                 return true;
             }
 
@@ -73,25 +73,25 @@ namespace HW3
             private string EvaluatePostFixInput(string input)
             {
                 if (input == null || input.Equals(""))
-                    throw new ArgumentException("Null or the empty string are not valid postfix expressions");
+                    throw new ArgumentException("Null or the empty string are not valid postfix expressions.");
                 Stack.Clear(); // Clear the stack before doing a new calculation.
                 int stackCount = 0; // Track the number of operands in the stack.
 
-                double a, b, c, x; // Temporary variables for two operands, answer, and TryParse
+                double a, b, c, s; // Temporary variables for operands, answer, and TryParse
 
                 string[] variables = input.Trim().Split(' ');
-                foreach (string v in variables)
+                foreach (string var in variables)
                 {
-                    // if it's a number, push it on the stack
-                    if (Double.TryParse(v, out x))
+                    // if number push it on the stack
+                    if (Double.TryParse(var, out s))
                     {
-                        Stack.Push((x));
+                        Stack.Push((s));
                         stackCount++;
                     }
-                    else // Must be an operator or some other character/word.
+                    else // Must be an operator or some other character or word.
                     {
-                        if (v.Length > 1)
-                            throw new ArgumentException("Input Error: " + v + " is not an allowed number or operator");
+                        if (var.Length > 1)
+                            throw new ArgumentException("Input Error: " + var + " is not an allowed number or operator");
                         // may be an operator, so pop two values off stack and perform operation
                         if (Stack.IsEmpty())
                             throw new ArgumentException("Improper input format. Stack became empty when expecting second operand.");
@@ -100,14 +100,12 @@ namespace HW3
                             throw new ArgumentException("Improper input format. Stack became empty when expecting first operand.");
                         a = (double)Stack.Pop();
                         // Send values to another method to perform operation.
-                        c = Evaluate(a, b, v, ref stackCount);
+                        c = DoOperation(a, b, var, ref stackCount);
                         // Push answer from operation back onto the stack.
                         Stack.Push(c);
                     }
                 } // end foreach
-                  // Bug fix: If only one thing left on stack, that is the answer, otherwise the user input the wrong number of operators
-                if (stackCount > 1)
-                    throw new ArgumentException("Input Error: Wrong operand to operator ratio.");
+
                 return Stack.Pop().ToString();
             }
 
@@ -116,19 +114,19 @@ namespace HW3
             /// </summary>
             /// <param name="a">First operand</param>
             /// <param name="b">Second operand</param>
-            /// <param name="v">Operator</param>
-            /// <param name="stackCount">Number of items on stack, passed by reference.</param>
+            /// <param name="s">Operator</param>
+            /// <param name="count">Number of items on stack, passed by reference.</param>
             /// <returns>The answer</returns>
-            private double Evaluate(double a, double b, string v, ref int stackCount)
+            private double DoOperation(double a, double b, string s, ref int count)
             {
                 double c = 0.0;
-                if (v.Equals("+"))
+                if (s.Equals("+"))
                     c = (a + b);
-                else if (v.Equals("-"))
+                else if (s.Equals("-"))
                     c = (a - b);
-                else if (v.Equals("*"))
+                else if (s.Equals("*"))
                     c = (a * b);
-                else if (v.Equals("/"))
+                else if (s.Equals("/"))
                 {
                     try
                     {
@@ -136,15 +134,15 @@ namespace HW3
                         if (Double.IsNegativeInfinity(c) || Double.IsPositiveInfinity(c))
                             throw new ArgumentException("Can't divide by zero.");
                     }
-                    catch (ArithmeticException ex)
+                    catch (ArithmeticException x)
                     {
-                        throw new ArgumentException(ex.Message);
+                        throw new ArgumentException(x.Message);
                     }
                 }
                 else
-                    throw new ArgumentException("Improper operator: " + v + ", is not  +, -, *, or /");
+                    throw new ArgumentException("Improper operator: " + s + ", is not one of +, -, *, or / \n");
 
-                stackCount--; // operation successful, one less item on stack
+                count--; // operation successful, one less item on stack
                 return c;
             }
         } // end class Calculator

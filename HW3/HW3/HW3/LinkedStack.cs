@@ -6,65 +6,14 @@
     /// </summary>
     class LinkedStack : IStackADT
     {
-        private Node topNode;
+        private Node top;
 
         /// <summary>
         /// Default constructor to make an empty stack.
         /// </summary>
         public LinkedStack()
         {
-            topNode = null;
-        }
-
-        /// <summary>
-        /// Property to get and set Node at the top of this stack.
-        /// </summary>
-        public Node TopNode
-        {
-            get { return topNode; }
-            set { topNode = value; }
-        }
-
-        /// <summary>
-        ///  Empty this stack.
-        /// </summary>
-        public void Clear()
-        {
-            this.TopNode = null;
-        }
-
-      
-        /// <summary>
-        /// Check if stack is empty.
-        /// </summary>
-        /// <returns>True if stack is empty, false if not</returns>
-        public bool IsEmpty()
-        {
-            return this.TopNode == null;
-        }
-
-        /// <summary>
-        /// Return the top item of this stack but don't remove it.
-        /// </summary>
-        /// <returns>A reference to item currently on the top of the stack or null if stack is empty</returns>
-        public object Peek()
-        {
-            return IsEmpty() ? null : TopNode.Data;
-        }
-
-        /// <summary>
-        /// Return and remove the top item on this stack.
-        /// </summary>
-        /// <returns>A reference that was popped from the top of the stack, or null if stack is empty</returns>
-        public object Pop()
-        {
-            if (IsEmpty())
-            {
-                return null;
-            }
-            object tempTop = TopNode.Data;
-            TopNode = TopNode.NextNode;
-            return tempTop;
+            top = null;
         }
 
         /// <summary>
@@ -78,9 +27,51 @@
             {
                 return null;
             }
-            Node newNode = new Node(newItem, TopNode);
-            TopNode = newNode;
+            Node newNode = new Node(newItem, top);
+           top = newNode;
             return newItem;
+        }
+
+        /// <summary>
+        /// Return and remove the top item on this stack.
+        /// </summary>
+        /// <returns>A reference that was popped from the top of the stack, or null if stack is empty</returns>
+        public object Pop()
+        {
+            if (IsEmpty())
+            {
+                return null;
+            }
+            object topItem = top.Data;
+            top = top.NextNode;
+            return topItem;
+        }
+
+        /// <summary>
+        /// Return the top item of this stack but don't remove it.
+        /// </summary>
+        /// <returns>A reference to item currently on the top of the stack or null if stack is empty</returns>
+        public object Peek()
+        {
+            return IsEmpty() ? null : top.Data;
+        }
+
+
+        /// <summary>
+        /// Check if stack is empty.
+        /// </summary>
+        /// <returns>True if stack is empty, false if not</returns>
+        public bool IsEmpty()
+        {
+            return this.top == null;
+        }
+
+        /// <summary>
+        ///  Empty this stack.
+        /// </summary>
+        public void Clear()
+        {
+            this.top = null;
         }
     }
 }

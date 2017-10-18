@@ -18,10 +18,10 @@ Before starting I reread the slides, and watched a few videos on working with C#
 
 
 Below is the console output of the C# postfix calculator.
-![](img/HW3_3.PNG?raw=true)
+![](img/HW3.PNG?raw=true)
 
 Output for unaccepted input
-![](img/HW3_null.PNG?raw=true)
+![](img/HW3_improper.PNG?raw=true)
 
 Once things were working I merged back to master with
 ```bash
@@ -31,3 +31,6 @@ Once things were working I merged back to master with
 ```
 
 All code can be found [here](https://github.com/hmadland/460).
+
+## Issues
+After merging I realized my .gitignore file was not working properly. After messing with it for a bit I eventually just copied my calculator code and deleted the files so I could start over with a .gitignore created through Visual Studio. Unfortunately I did forget to switch back to my featureHW3 branch for this, but since the code was already working there wasn't much risk.
