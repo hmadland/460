@@ -5,7 +5,7 @@
     /// </summary>
     class Node
     {
-        object data; // Contents of this node
+        object data; // The payload
         Node nextNode; // Reference to next Node in the chain
 
 

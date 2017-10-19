@@ -41,28 +41,28 @@ namespace HW3
             /// finished.If the user wishes to quit this method returns false.
             /// </summary>
             /// <returns>True if a calculation succeeded, false if the usere wishes to quit.</returns>
-            private bool Calculate()
+          private bool Calculate()
             {
-                Console.Write("Please enter q to quit\n ");
-                string input, output = "";
+               Console.Write("Please enter q to quit\n ");
+               string input, output = "";
 
-                input = Console.ReadLine();
+               input = Console.ReadLine();
                 // See if user wants to quit.
-                if (input.Trim().ToLower().StartsWith("q"))
+               if (input.Trim().ToLower().StartsWith("q"))
                 {
                     return false;
                 }
                 // do calculation
-                try
+               try
                 {
                     output = EvaluatePostFixInput(input);
                 }
-                catch (ArgumentException x)
+               catch (ArgumentException x)
                 {
                     output = x.Message;
                 }
-                Console.Write("\n\t>>> " + input + " = " + output +  "\n");
-                return true;
+               Console.Write("\n\t>>> " + input + " = " + output +  "\n");
+               return true;
             }
 
             /// <summary>
@@ -75,9 +75,9 @@ namespace HW3
                 if (input == null || input.Equals(""))
                     throw new ArgumentException("Null or the empty string are not valid postfix expressions.");
                 Stack.Clear(); // Clear the stack before doing a new calculation.
-                int stackCount = 0; // Track the number of operands in the stack.
+                int stackCount = 0; 
 
-                double a, b, c, s; // Temporary variables for operands, answer, and TryParse
+                double a, b, c, s; // Temporary variables 
 
                 string[] variables = input.Trim().Split(' ');
                 foreach (string var in variables)
@@ -142,7 +142,7 @@ namespace HW3
                 else
                     throw new ArgumentException("Improper operator: " + s + ", is not one of +, -, *, or / \n");
 
-                count--; // operation successful, one less item on stack
+                count--;
                 return c;
             }
         } // end class Calculator
