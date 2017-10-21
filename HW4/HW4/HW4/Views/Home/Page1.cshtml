@@ -1,7 +1,25 @@
 ﻿
 @{
-    ViewBag.Title = "Page1";
+    ViewBag.Title = "Page 1";
 }
 
 <h2>Page1</h2>
+
+<form method="get">
+        <label for="ammount">Ammount</label>
+        <br/>
+        <input type="text" name="ammount" value="" />
+        <br/><br/>
+   
+        <label for="convert">Enter D to convert to dollars or E to convert to euros </label>
+        <br/>
+        <input type="text" name="convert" />
+
+        <input type="submit" name="submit" value="Submit" />
+</form>
+
+<br/>
+<br/>
+    <p>@ViewBag.x</p>
+
 
