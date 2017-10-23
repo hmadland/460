@@ -56,5 +56,52 @@ namespace HW4.Controllers
             return View();
     
         }
+
+        [HttpGet]
+        public ActionResult Page2()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Page2(FormCollection form)
+        {
+            double numDegree;
+            string degree = Request.Form["degree"];
+            string convert = Request.Form["convert"];
+
+            if (degree != null && degree != "")
+            {
+                //convert to Celsius
+                if (convert == "C" || convert == "c")
+                {
+                    //convert ammount to double
+                    numDegree = Convert.ToDouble(degree);
+                    //subtract 32 and multiply by .5556 
+                    double newDegree = ((numDegree - 32) * .5556);
+                    //convert newDegree to string
+                    string answere = newDegree.ToString();
+
+                    //return Content($"{degree} Fahrenheit =  {answere} Celsius");
+                    ViewBag.x = ($"{degree} Fahrenheit =  {answere} Celsius");
+                }
+
+                //convert to Fahrenheit
+                if (convert == "F" || convert == "f")
+                {
+                    //convert ammount to double
+                    numDegree = Convert.ToDouble(degree);
+                    //multiply by 1.8 (or 9/5) and add 32.
+                    double newDegree = ((numDegree * 1.8) + 32);
+                    //convert newAmmount to string
+                    string answere = newDegree.ToString();
+
+                    // return Content($"{degree} Celsius =  {answere} Fahrenheit");
+                    ViewBag.x = ($"{degree} Celsius =  {answere} Fahrenheit");
+                }
+            }
+                return View();
+        }
+
     }
 }
