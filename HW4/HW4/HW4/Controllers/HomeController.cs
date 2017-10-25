@@ -18,38 +18,38 @@ namespace HW4.Controllers
         // GET: Page1
         public ActionResult Page1()
         {
-            double numAmmount = 0;
-            string ammount = Request.QueryString["ammount"];
+            double numAmount = 0;
+            string amount = Request.QueryString["amount"];
             string convert = Request.QueryString["convert"];
 
-            if (ammount != null && ammount != "")
+            if (amount != null && amount != "")
             {
                 //convert to euros
                 if (convert == "E" || convert == "e")
                 {
-                    //convert ammount to double
-                    numAmmount = Convert.ToDouble(ammount);
-                    //multiply ammount by .848551
-                    double newAmmount = (numAmmount * .848551);
-                    //convert newAmmount to string
-                    string answere = newAmmount.ToString();
+                    //convert amount to double
+                    numAmount = Convert.ToDouble(amount);
+                    //multiply amount by .848551
+                    double newAmount = (numAmount * .848551);
+                    //convert newAmount to string
+                    string answere = newAmount.ToString();
 
-                    //return Content($"{ammount} dollars =  {answere} euros");
-                    ViewBag.x = ($"{ammount} Dollars =  {answere} Euros");
+                    //return Content($"{amount} dollars =  {answere} euros");
+                    ViewBag.x = ($"{amount} Dollars =  {answere} Euros");
                 }
 
                 //convert to dollars
                 if (convert == "D" || convert == "d")
                 {
-                    //convert ammount to double
-                    numAmmount = Convert.ToDouble(ammount);
-                    //multiply ammount by 1.178367
-                    double newAmmount = (numAmmount * 1.178367);
-                    //convert newAmmount to string
-                    string answere = newAmmount.ToString();
+                    //convert amount to double
+                    numAmount = Convert.ToDouble(amount);
+                    //multiply amount by 1.178367
+                    double newAmount = (numAmount * 1.178367);
+                    //convert newAmount to string
+                    string answere = newAmount.ToString();
 
-                   // return Content($"{ammount} euros =  {answere} dollars");
-                    ViewBag.x = ($"{ammount} Euros =  {answere} Dollars");
+                   // return Content($"{amount} euros =  {answere} dollars");
+                    ViewBag.x = ($"{amount} Euros =  {answere} Dollars");
                 }
 
             }
@@ -75,7 +75,7 @@ namespace HW4.Controllers
                 //convert to Celsius
                 if (convert == "C" || convert == "c")
                 {
-                    //convert ammount to double
+                    //convert amount to double
                     numDegree = Convert.ToDouble(degree);
                     //subtract 32 and multiply by .5556 
                     double newDegree = ((numDegree - 32) * .5556);
@@ -89,11 +89,11 @@ namespace HW4.Controllers
                 //convert to Fahrenheit
                 if (convert == "F" || convert == "f")
                 {
-                    //convert ammount to double
+                    //convert amount to double
                     numDegree = Convert.ToDouble(degree);
                     //multiply by 1.8 (or 9/5) and add 32.
                     double newDegree = ((numDegree * 1.8) + 32);
-                    //convert newAmmount to string
+                    //convert newAmount to string
                     string answere = newDegree.ToString();
                     // return Content($"{degree} Celsius =  {answere} Fahrenheit");
                     ViewBag.x = ($"{degree} Celsius =  {answere} Fahrenheit");
