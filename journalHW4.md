@@ -167,7 +167,7 @@ This form used POST to post the data from the form to the server. My GET method 
 Once completed I merged back to master
 
 ## Page 3
-For Page 3 I built a loan calculator where the user could input the loan ammount, interest rate, and length of loan. After submission the form returned the monthly payments and total paid. The form uses POST.
+For Page 3 I built a loan calculator where the user could input the loan amount, interest rate, and length of loan. After submission the form returned the monthly payments and total paid. The form uses POST.
 ```bash
 @{
     ViewBag.Title = "Page3";
