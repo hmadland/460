@@ -5,6 +5,7 @@ layout: default
 ## Homework 4
 The fourth assignment asked us to use ASP.NET MVC 5 to create a multi-page MVC web application (not using a database)
 The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW4.html).
+The finished web application can be found [here] ().
 
 ## Creating an MVC Project
 To start I created an MVC project and created a new feature branch. I started by setting up a Home page with a ul list linking to all other pages. Later I also implemented the nav bar. To create the list I used @Html.ActionLink helper methods.
@@ -43,54 +44,59 @@ The form takes in a number and the user can choose to convert that into either d
 
 <br/>
 <br/>
-    <p>@ViewBag.x</p>
+    <label>@ViewBag.x</label>
 ```
 
 I used GET to retrieve server-side content based on the values in the request,
 and as instructed my controller action method used no parameters.
 ```bash
 // GET: Page1
-public ActionResult Page1()
-{
-    double numAmount = 0;
-    string amount = Request.QueryString["amount"];
-    string convert = Request.QueryString["convert"];
-
-    if (amount != null && amount != "")
-    {
-        //convert to euros
-        if (convert == "E" || convert == "e")
+        public ActionResult Page1()
         {
-            //convert amount to double
-            numAmount = Convert.ToDouble(amount);
-            //multiply amount by .848551
-            double newAmount = (numAmount * .848551);
-            //convert newAmount to string
-            string answere = newAmount.ToString();
+            double numAmount = 0;
+            string amount = Request.QueryString["amount"];
+            string convert = Request.QueryString["convert"];
 
-            //return Content($"{amount} dollars =  {answere} euros");
-            ViewBag.x = ($"{amount} Dollars =  {answere} Euros");
+            if (amount != null && amount != "")
+            {
+                //convert to euros
+                if (convert == "E" || convert == "e")
+                {
+                    //convert amount to double
+                    numAmount = Convert.ToDouble(amount);
+                    //multiply amount by .848551
+                    double newAmount = (numAmount * .848551);
+                    //convert newAmount to string
+                    string answere = newAmount.ToString();
+
+                    //return Content($"{amount} dollars =  {answere} euros");
+                    ViewBag.x = ($"{amount} Dollars =  {answere} Euros");
+                }
+
+                //convert to dollars
+                if (convert == "D" || convert == "d")
+                {
+                    //convert amount to double
+                    numAmount = Convert.ToDouble(amount);
+                    //multiply amount by 1.178367
+                    double newAmount = (numAmount * 1.178367);
+                    //convert newAmount to string
+                    string answere = newAmount.ToString();
+
+                   // return Content($"{amount} euros =  {answere} dollars");
+                    ViewBag.x = ($"{amount} Euros =  {answere} Dollars");
+                }
+
+            }
+            return View();
+
         }
-
-        //convert to dollars
-        if (convert == "D" || convert == "d")
-        {
-            //convert amount to double
-            numAmount = Convert.ToDouble(amount);
-            //multiply amount by 1.178367
-            double newAmount = (numAmount * 1.178367);
-            //convert newAmount to string
-            string answere = newAmount.ToString();
-
-           // return Content($"{amount} euros =  {answere} dollars");
-            ViewBag.x = ($"{amount} Euros =  {answere} Dollars");
-        }
-
-    }
-    return View();
-}
 ```
 After this was completed I merged my feature branch back to master.
+Below you can see Page 1:
+![](img/Page1.PNG?raw=true)
+Page 1 after form submission
+![](img/Page1_return.PNG?raw=true)
 
 ## Page 2
 For Page 2 I made a simple temperature converter for Fahrenheit and Celsius.
@@ -115,7 +121,7 @@ For Page 2 I made a simple temperature converter for Fahrenheit and Celsius.
 </form>
 <br />
 <br />
-<p>@ViewBag.x</p>
+<label>@ViewBag.x</label>
 ```
 This form used POST to post the data from the form to the server. My GET method was parameterless and my POST used the FormCollection type parameter.
 ```bash
@@ -165,6 +171,11 @@ This form used POST to post the data from the form to the server. My GET method 
         }
 ```
 Once completed I merged back to master
+Below you can see Page 2:
+![](img/Page2.PNG?raw=true)
+Page 2 after form submission
+![](img/Page2_return.PNG?raw=true)
+
 
 ## Page 3
 For Page 3 I built a loan calculator where the user could input the loan amount, interest rate, and length of loan. After submission the form returned the monthly payments and total paid. The form uses POST.
@@ -250,7 +261,7 @@ Since we are not yet using models the function used to calculate the monthly pay
             tPay = Math.Round((n * amountx),2);
 
             //set output
-            output = "Monthly Payments = $" + mPay +"  Total payments = $" + tPay;
+            output = "Monthly Payments = $" + mPay +"  Total paid = $" + tPay;
             //return output
             return output;
         }
@@ -258,3 +269,8 @@ Since we are not yet using models the function used to calculate the monthly pay
     }
 }
 ```
+After the code was finished I merged back to master.
+Below you can view Page 3:
+![](img/Page3.PNG?raw=true)
+Page 3 after form submission
+![](img/Page3_return.PNG?raw=true)

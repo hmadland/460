@@ -151,7 +151,7 @@ namespace HW4.Controllers
             tPay = Math.Round((n * amountx),2);
            
             //set output
-            output = "Monthly Payments = $" + mPay +"  Total payments = $" + tPay;
+            output = "Monthly Payments = $" + mPay +"  Total paid = $" + tPay;
             //return output
             return output;
         }
