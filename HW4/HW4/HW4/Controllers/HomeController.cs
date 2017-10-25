@@ -95,12 +95,65 @@ namespace HW4.Controllers
                     double newDegree = ((numDegree * 1.8) + 32);
                     //convert newAmmount to string
                     string answere = newDegree.ToString();
-
                     // return Content($"{degree} Celsius =  {answere} Fahrenheit");
                     ViewBag.x = ($"{degree} Celsius =  {answere} Fahrenheit");
                 }
             }
                 return View();
+        }
+
+        [HttpGet]
+        public ActionResult Page3()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Page3(double? Principle, double? InterestRate,  double? LoanTerm)
+        {
+            string answer = monthlyPay(Principle, InterestRate, LoanTerm);
+            ViewBag.stuff = answer;
+            return View(); 
+        }
+
+
+        //function
+          string  monthlyPay(double? amount, double? rate, double? numTerms)
+        {
+            //variables
+            double? mPay =0;
+            double? tPay =0;
+            string output;
+
+            //check if form is blank
+            if ((amount == null) || (rate == null) || (numTerms == null))
+            {
+                output = "Please enter a value in all fields";
+                return output;
+            }
+
+            ///math
+            double? interest = (rate/100) / (12);
+            double i = Convert.ToDouble(interest);
+            //number of payments = years * 12
+            double n = Convert.ToDouble(numTerms * 12);
+
+            double discount = (Math.Pow((1 + i), n) - 1) / (i * Math.Pow((1 + i), n));
+            Debug.WriteLine(discount);
+
+            //change to double so we can round
+            double a = Convert.ToDouble(amount);
+
+            //
+            double amountx = Math.Round((a / discount), 2);
+            mPay = Math.Round((a / discount), 2);
+          //number of payments * amount payed per payment
+            tPay = Math.Round((n * amountx),2);
+           
+            //set output
+            output = "Monthly Payments = $" + mPay +"  Total payments = $" + tPay;
+            //return output
+            return output;
         }
 
     }

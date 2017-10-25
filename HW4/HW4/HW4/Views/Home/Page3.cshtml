@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Page3";
+}
+
+<h2>Fixed Term Loan Calculator</h2>
+<body>
+     
+
+    <form method="post">
+        <label for="Principle">Loan Amount</label>
+        <br />
+        <input type="number" min="1" name="Principle" value =""/>
+        <br />
+        <br />
+        <label for="InterestRate">Interest Rate </label>
+        <br />
+        <input type="number"min="0" step="0.01" name="InterestRate" value =""/>
+        <br/>
+        <br/>
+        <label for="LoanTerm">Term Length in Years </label>
+        <br />
+        <input type="number" min ="1" name="LoanTerm" value ="" />
+        <br/>
+        <br/>
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+        <br/>
+
+    <Label>@ViewBag.stuff</Label>
+</body>
