@@ -5,7 +5,6 @@ layout: default
 ## Homework 4
 The fourth assignment asked us to use ASP.NET MVC 5 to create a multi-page MVC web application (not using a database)
 The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW4.html).
-The finished web application can be found [here] ().
 
 ## Creating an MVC Project
 To start I created an MVC project and created a new feature branch. I started by setting up a Home page with a ul list linking to all other pages. Later I also implemented the nav bar. To create the list I used @Html.ActionLink helper methods.
