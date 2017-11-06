@@ -19,21 +19,6 @@ namespace HW5.Controllers
             return View(db.Forms.ToList());
         }
 
-        // GET: Forms/Details
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Form form = db.Forms.Find(id);
-            if (form == null)
-            {
-                return HttpNotFound();
-            }
-            return View(form);
-        }
-
         // GET: Forms/Create
         public ActionResult Create()
         {
@@ -53,61 +38,6 @@ namespace HW5.Controllers
             }
 
             return View(form);
-        }
-
-        // GET: Forms/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Form form = db.Forms.Find(id);
-            if (form == null)
-            {
-                return HttpNotFound();
-            }
-            return View(form);
-        }
-
-        // POST: Forms/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,DOB")] Form form)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(form).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(form);
-        }
-
-        // GET: Forms/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Form form = db.Forms.Find(id);
-            if (form == null)
-            {
-                return HttpNotFound();
-            }
-            return View(form);
-        }
-
-        // POST: Forms/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Form form = db.Forms.Find(id);
-            db.Forms.Remove(form);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
