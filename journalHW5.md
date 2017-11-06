@@ -125,6 +125,7 @@ Next I added a connection string to my Web.config file. This also took a long ti
 ```
 ## controller
 Next I made the controller and action methods.
+
 FormController:
 ```bash
 using System;
@@ -205,7 +206,7 @@ public class HomeController : Controller
 ```
 
 ## views
-I created three vies one as a basic home page with the option to fill out a form or view the table.
+I created three views one as a basic home page with the option to fill out a form or view the table.
 
 ```bash
 @{
