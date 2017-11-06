@@ -16,7 +16,7 @@ Software Engineering I (CS 460): Homework
 * [Homework 2:](https://hmadland.github.io/460/journalHW2.html) Javascript and jQuery
 * [Homework 3:](https://hmadland.github.io/460/journalHW3.html) C# and Visual Studio
 * [Homework 4:](https://hmadland.github.io/460/journalHW4.html) ASP.NET MVC 5
-* [Homework 5:](https://hmadland.github.io/460/journalHW5.html)
+* [Homework 5:](https://hmadland.github.io/460/journalHW5.html) MVC and simple DB
 * [Homework 6:](https://hmadland.github.io/460/journalHW6.html)
 * [Homework 7:](https://hmadland.github.io/460/journalHW7.html)
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html)
