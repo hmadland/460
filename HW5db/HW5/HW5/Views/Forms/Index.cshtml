@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HW5.Models.Form>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Change of Address Form", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.County)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.NewAddress)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.City)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.NewState)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.County)
+            </th>
+        </tr>
+    }
+
+</table>
