@@ -8,20 +8,112 @@ The assignment instructions can be found [here](http://www.wou.edu/~morses/class
 
 ## Database
 First off I created a database using LocalDB and wrote the up.sql and down.sql scripts.
-It took me an annoyingly long amount of time to figure out why I wasn't able to view my entries, but it turned out I was running the up.sql on master and not my local .mdf file
+It took me an annoyingly long amount of time to figure out why I wasn't able to view my entries, but it turned out I was running the up.sql on master and not my local .mdf file.
+
 up.sql creates the table and inserts five entries.
-![](img/upSQL.PNG?raw=true)
+```bash
+-- Form table
+CREATE TABLE dbo.Forms
+(
+	ID			INT IDENTITY (1,1) NOT NULL,
+	FirstName	NVARCHAR(64) NOT NULL,
+	LastName	NVARCHAR(128) NOT NULL,
+	DOB			DateTime NOT NULL,
+	NewAddress		NVARCHAR(128) NOT NULL,
+	City		NVARCHAR(128) NOT NULL,
+	NewState	NVARCHAR(64) NOT NULL,
+	Zip			INT NOT NULL,
+	County		NVARCHAR(128) NOT NULL,
+	CONSTRAINT [PK_dbo.Forms] PRIMARY KEY CLUSTERED (ID ASC)
+);
+
+INSERT INTO dbo.Forms (FirstName, LastName, DOB, NewAddress, City, NewState, Zip, County) VALUES
+	('Buffy','Summers','1981-01-19 00:00:00','1630 Revello Drive','Sunnydale','California','95037', 'Santa Barbara'),
+	('Xander','Harris','1981-01-25 00:00:00','1630 Revello Drive','Sunnydale','California','95037' ,'Santa Barbara'),
+	('Willow','Rosenberg','1955-05-10 00:00:00','1630 Revello Drive','Sunnydale','California','95037', 'Santa Barbara'),
+	('Rupert','Giles','1981-01-28 00:00:00','1630 Main St.','Sunnydale','California','95037', 'Santa Barbara'),
+	('Spike','Pratt','1797-04-02 00:00:00','Sunnydale Cemetery','Sunnydale','California','95037', 'Santa Barbara');
+GO
+```
 
 down.sql deletes the table
-![](img/downSQL.PNG?raw=true)
+```bash
+DELETE FROM Forms;
+```
 
 ## Model and Context classes
 Next I built a model class
-![](img/modelp1.PNG?raw=true)
-![](img/modelp2.PNG?raw=true)
+```bash
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
+namespace HW5.Models
+{
+    public class Form
+    {
+        public int ID { get; set; }
+
+        [Required, StringLength(64)]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required, StringLength(64)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "DOB")]
+        public DateTime DOB { get; set; }
+
+        [Required, StringLength(128)]
+        [Display(Name = "Address")]
+        public string NewAddress { get; set; }
+
+        [Required, StringLength(128)]
+        [Display(Name = "City")]
+        public string City { get; set; }
+
+        [Required, StringLength(64)]
+        [Display(Name = "State")]
+        public string NewState { get; set; }
+
+        [Display(Name = "Zip")]
+        public int Zip { get; set; }
+
+        [Display(Name = "County")]
+        public string County { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}: {FirstName} {LastName} DOB = {DOB} {NewAddress} {City} {NewState} Zip = {Zip}";
+        }
+    }
+}
+```
 and then I created a DAL (Data Access Layer) folder where I later built my context class
-![](img/context.PNG?raw=true)
+```bash
+using HW5.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace HW5.DAL
+{
+    public class FormContext : DbContext
+    {
+        public FormContext() : base("name=OurDBContext")
+        { }
+
+        public virtual DbSet<Form> Forms { get; set; }
+    }
+}
+
+```
 
 ## Connection string
 Next I added a connection string to my Web.config file. This also took a long time before I got everything correct so it connected to my db.
