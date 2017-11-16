@@ -5,10 +5,10 @@ layout: default
 ## Homework 6
 For assignment 6 we were asked to built an application that used an existing database and use LINQ to access and present information from the database. The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW6.html).
 
-##Step one
+## Step One
 First off, I got the AdventureWorks2014.bak file from the link in the HW6 directions. Once the .bak file was restored and the database was connected to my HW6 project I auto generated the data models and the database context. To do this I simply right-clicked on the models folder, and selected Add -> New Item. From there a window popped up and I selected Data and then ADO.NET Entity Data Model this is also were you name the Data Entity Model which is also the name the context class takes too. I wound up doing this step a little too fast and named it Model1 by mistake, but it still functions even with a stupid name. After this step I then selected Code First From Database so I could work from AdventureWorks2014 after that it was simply a matter of selecting the tables I wanted to use.
 
-##Feature one
+## Feature one
 Feature one asked us to allow a user to brows products within AdventureWorks2014.
 For this I made an Index view with a nav bar listing the different product categories if a user clicked a category a list of subcategories would drop down.
 
