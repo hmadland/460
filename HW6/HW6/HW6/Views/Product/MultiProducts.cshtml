@@ -1,0 +1,47 @@
+﻿@model IEnumerable<HW6.Models.Product>
+@{
+    ViewBag.Title = "MultiProducts";
+}
+
+<!--Background image-->
+<body background="/Content/img/forest.JPG">    
+    <div class="row" style="background-color:#222222;border-color : #080808;">
+
+        <center><h2 style="color:white"><span ><strong> @Html.DisplayFor(modelItem => modelItem.FirstOrDefault().ProductSubcategory.Name)</strong></span></h2></center>
+
+        <h4>
+            <!-- Link back to Home  -->
+            <span style="padding-left:10px">@Html.ActionLink("Home", "Index", "Product") </span> >
+        </h4>
+
+        <!-- Display image, name, product number, and price  -->
+        @foreach (var product in Model)
+        {
+            <center>
+                <div class="col-md-3">
+                    <div>
+                        <img src="@Url.Action("ProductPhoto", "Product", new { ID = product.ProductID, photo = true })" />
+                    </div>
+                    <div>
+                        <!-- Product name links to product's page -->
+                        <h4><strong>@Html.ActionLink(product.Name, "IndividualProduct", new { id = product.ProductID })</strong></h4>
+                    </div>
+
+                    <div style="padding-bottom:10px">
+                        <h4 style="color:white"> <strong>$@Html.DisplayFor(modelItem => product.ListPrice)</strong></h4>
+                    </div>
+                </div>
+            </center>
+        }
+    </div>
+    <br />
+    <!-- Make page links for number of pages in subcategory -->
+    <div>
+        <ul class="pagination pagination-lg">
+            @for (int i = 1; i <= ViewBag.NumberofPages; ++i)
+            {
+                <li >@Html.ActionLink(i.ToString(), "MultiProducts", new { id = Model.FirstOrDefault().ProductSubcategoryID, page = i })</li>
+            }
+        </ul>
+    </div>
+</body>

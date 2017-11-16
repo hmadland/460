@@ -102,6 +102,7 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\forest.JPG" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -114,13 +115,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Models\BillOfMaterial.cs" />
+    <Compile Include="App_Data\App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Models\Culture.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BillOfMaterial.cs" />
+    <Compile Include="Models\Culture.cs" />
     <Compile Include="Models\Illustration.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Model1.cs" />
@@ -138,33 +139,13 @@
     <Compile Include="Models\ProductProductPhoto.cs" />
     <Compile Include="Models\ProductReview.cs" />
     <Compile Include="Models\ProductSubcategory.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ScrapReason.cs" />
     <Compile Include="Models\TransactionHistory.cs" />
     <Compile Include="Models\TransactionHistoryArchive.cs" />
     <Compile Include="Models\UnitMeasure.cs" />
-    <Compile Include="Models\vAdditionalContactInfo.cs" />
-    <Compile Include="Models\vEmployee.cs" />
-    <Compile Include="Models\vEmployeeDepartment.cs" />
-    <Compile Include="Models\vEmployeeDepartmentHistory.cs" />
-    <Compile Include="Models\vIndividualCustomer.cs" />
-    <Compile Include="Models\vJobCandidate.cs" />
-    <Compile Include="Models\vJobCandidateEducation.cs" />
-    <Compile Include="Models\vJobCandidateEmployment.cs" />
-    <Compile Include="Models\vPersonDemographic.cs" />
-    <Compile Include="Models\vProductAndDescription.cs" />
-    <Compile Include="Models\vProductModelCatalogDescription.cs" />
-    <Compile Include="Models\vProductModelInstruction.cs" />
-    <Compile Include="Models\vSalesPerson.cs" />
-    <Compile Include="Models\vSalesPersonSalesByFiscalYear.cs" />
-    <Compile Include="Models\vStateProvinceCountryRegion.cs" />
-    <Compile Include="Models\vStoreWithAddress.cs" />
-    <Compile Include="Models\vStoreWithContact.cs" />
-    <Compile Include="Models\vStoreWithDemographic.cs" />
-    <Compile Include="Models\vVendorWithAddress.cs" />
-    <Compile Include="Models\vVendorWithContact.cs" />
     <Compile Include="Models\WorkOrder.cs" />
     <Compile Include="Models\WorkOrderRouting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -176,7 +157,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Product\Product.cshtml" />
+    <Content Include="Views\Product\MultiProducts.cshtml" />
+    <Content Include="Views\Product\IndividualProduct.cshtml" />
+    <Content Include="Views\Product\Review.cshtml" />
+    <Content Include="Views\Product\ViewReviews.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HW6.Models.ProductReview>
+
+    @{
+        ViewBag.Title = "ViewReviews";
+    }
+
+    <!--background image-->
+    <body background="/Content/img/forest.JPG">
+
+        <div class="row col-md-12" style="background-color:#222222; padding-bottom:20px;">
+
+            <table class="table" style="color:white">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReviewerName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rating)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Comments)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReviewDate)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReviewerName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Comments)
+                        </td>
+                        <th>
+                            @Html.DisplayFor(modelItem => item.ReviewDate)
+                        </th>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </body>

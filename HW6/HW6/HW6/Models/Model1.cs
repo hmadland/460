@@ -1,4 +1,4 @@
-namespace HW6
+namespace HW6.Models
 {
     using System;
     using System.Data.Entity;
@@ -8,7 +8,7 @@ namespace HW6
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -36,26 +36,6 @@ namespace HW6
         public virtual DbSet<WorkOrder> WorkOrders { get; set; }
         public virtual DbSet<WorkOrderRouting> WorkOrderRoutings { get; set; }
         public virtual DbSet<ProductDocument> ProductDocuments { get; set; }
-        public virtual DbSet<vEmployee> vEmployees { get; set; }
-        public virtual DbSet<vEmployeeDepartment> vEmployeeDepartments { get; set; }
-        public virtual DbSet<vEmployeeDepartmentHistory> vEmployeeDepartmentHistories { get; set; }
-        public virtual DbSet<vJobCandidate> vJobCandidates { get; set; }
-        public virtual DbSet<vJobCandidateEducation> vJobCandidateEducations { get; set; }
-        public virtual DbSet<vJobCandidateEmployment> vJobCandidateEmployments { get; set; }
-        public virtual DbSet<vAdditionalContactInfo> vAdditionalContactInfoes { get; set; }
-        public virtual DbSet<vStateProvinceCountryRegion> vStateProvinceCountryRegions { get; set; }
-        public virtual DbSet<vProductAndDescription> vProductAndDescriptions { get; set; }
-        public virtual DbSet<vProductModelCatalogDescription> vProductModelCatalogDescriptions { get; set; }
-        public virtual DbSet<vProductModelInstruction> vProductModelInstructions { get; set; }
-        public virtual DbSet<vVendorWithAddress> vVendorWithAddresses { get; set; }
-        public virtual DbSet<vVendorWithContact> vVendorWithContacts { get; set; }
-        public virtual DbSet<vIndividualCustomer> vIndividualCustomers { get; set; }
-        public virtual DbSet<vPersonDemographic> vPersonDemographics { get; set; }
-        public virtual DbSet<vSalesPerson> vSalesPersons { get; set; }
-        public virtual DbSet<vSalesPersonSalesByFiscalYear> vSalesPersonSalesByFiscalYears { get; set; }
-        public virtual DbSet<vStoreWithAddress> vStoreWithAddresses { get; set; }
-        public virtual DbSet<vStoreWithContact> vStoreWithContacts { get; set; }
-        public virtual DbSet<vStoreWithDemographic> vStoreWithDemographics { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -268,62 +248,6 @@ namespace HW6
 
             modelBuilder.Entity<WorkOrderRouting>()
                 .Property(e => e.ActualCost)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vStateProvinceCountryRegion>()
-                .Property(e => e.StateProvinceCode)
-                .IsFixedLength();
-
-            modelBuilder.Entity<vProductAndDescription>()
-                .Property(e => e.CultureID)
-                .IsFixedLength();
-
-            modelBuilder.Entity<vProductModelInstruction>()
-                .Property(e => e.SetupHours)
-                .HasPrecision(9, 4);
-
-            modelBuilder.Entity<vProductModelInstruction>()
-                .Property(e => e.MachineHours)
-                .HasPrecision(9, 4);
-
-            modelBuilder.Entity<vProductModelInstruction>()
-                .Property(e => e.LaborHours)
-                .HasPrecision(9, 4);
-
-            modelBuilder.Entity<vPersonDemographic>()
-                .Property(e => e.TotalPurchaseYTD)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPerson>()
-                .Property(e => e.SalesQuota)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPerson>()
-                .Property(e => e.SalesYTD)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPerson>()
-                .Property(e => e.SalesLastYear)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPersonSalesByFiscalYear>()
-                .Property(e => e.C2002)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPersonSalesByFiscalYear>()
-                .Property(e => e.C2003)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vSalesPersonSalesByFiscalYear>()
-                .Property(e => e.C2004)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vStoreWithDemographic>()
-                .Property(e => e.AnnualSales)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<vStoreWithDemographic>()
-                .Property(e => e.AnnualRevenue)
                 .HasPrecision(19, 4);
         }
     }

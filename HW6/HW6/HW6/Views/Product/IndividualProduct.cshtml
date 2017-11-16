@@ -1,0 +1,80 @@
+﻿
+@model HW6.Models.Product
+@{
+    ViewBag.Title = "IndividualProduct";
+}
+
+<!--background image-->
+<body background="/Content/img/forest.JPG">
+
+    <div class="row col-md-12" style="background-color:#222222; padding-bottom:20px;">
+       
+            <!-- Link back to subcategory -->
+            <h4>@Html.ActionLink(Model.ProductSubcategory.Name, "MultiProducts/" + Model.ProductSubcategoryID)</h4>
+        <h4>
+            <span style="color:white">@Html.DisplayFor(model => model.ProductModel.Name)</span>
+        </h4>
+        <hr />
+        <!-- Display image  -->
+        <div class="row col-md-8">
+            <div class="col-md-3">
+                <img src="@Url.Action("ProductPhoto", "Product", new { ID = Model.ProductID, photo = true })" />
+            </div>
+
+   <!-- Display  product info-->
+    <dl class="dl-horizontal col-md-5" style="color:white" >
+        <dt>
+            Model #: 
+        </dt>
+
+        <dd >
+            @Html.DisplayFor(model => model.ProductNumber)
+        </dd>
+
+        <dt>
+           Color:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            Price:
+        </dt>
+
+        <dd>
+            $@Html.DisplayFor(model => model.ListPrice)
+        </dd>
+
+        <dt>
+            Size:
+        </dt>
+
+        <dd>
+            <span>@Html.DisplayFor(model => model.Size)</span>
+            <span> @ViewBag.SizeUnit</span>
+        </dd>
+
+        <dt>
+            Weight:
+        </dt>
+
+        <dd>
+            <span>@Html.DisplayFor(model => model.Weight)</span> @ViewBag.WeightUnit<span></span>
+        </dd>
+    </dl>
+</div>
+
+        <div class="col-lg-3">
+            <div>
+                <h4>@Html.ActionLink("Review", "Review/" + Model.ProductID)</h4>
+            </div>
+            <div>
+                <h4>@Html.ActionLink("See all Reviews", "ViewReviews/" + Model.ProductID)</h4>
+            </div>
+        </div>
+
+       
+    </div>
+</body>

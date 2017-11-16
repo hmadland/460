@@ -1,38 +1,44 @@
-﻿@model IEnumerable<HW6.ProductCategory>
+﻿@model IEnumerable<HW6.Models.ProductCategory>
 @{
     ViewBag.Title = "Index";
 }
 
-<div>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">AdventurWorks</a>
-            <div>
-                <ul class="nav navbar-nav">
-                    @foreach (var item in Model.ToList())
-                    {
-                        @Html.ActionLink(item.Name, "Index/" + item.ProductCategoryID, new { controller = "Product" }, new { @class = "btn " });
+<!--Background image-->
+ <body background="/Content/img/forest.JPG">
+    <div>
+            <nav class="navbar navbar-inverse ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div>
+                        <h2 style="color:white; padding-left:10px">AdventureWorks</h2>
+
+                        <ul class="nav navbar-nav" style="padding-bottom:10px;">
+                            @foreach (var product in Model.ToList())
+                            {
+                                @Html.ActionLink(product.Name, "Index/" + product.ProductCategoryID, new { controller = "Product" }, new { @class = "btn-lg" });
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="list-group; borderless" style="background-color:dimgray">
+            <!-- If product category was selected make list of links for Subcategories -->
+            @if (ViewBag.ID != null)
+            {
+                <!--Category selected -->
+                <h2 style="color:white; padding-left:10px">@Model.Where(p => p.ProductCategoryID == ViewBag.ID).FirstOrDefault().Name</h2>
+
+                <ul class="list-group">
+                    @foreach (var item in Model.Where(p => p.ProductCategoryID == ViewBag.ID).Select(p => p.ProductSubcategories).ToList().FirstOrDefault())
+                {
+                        <li class="list-group-item" style="background-color:#222222; border-color: #080808;">
+                            @Html.ActionLink(item.Name, "MultiProducts/" + item.ProductSubcategoryID, new { controller = "Product" }, new { @class = "btn-lg" })
+                        </li>
                     }
                 </ul>
-            </div>
-            </div>
+            }
         </div>
-    </nav>
-   
-    <div class="navbar navbar-deefault">
-        <!-- If Product Category was selected, show list of links for that Category's Subcategories -->
-        @if (ViewBag.ID != null)
-            {
-            <h1>@Model.Where(p => p.ProductCategoryID == ViewBag.ID).FirstOrDefault().Name</h1> <!-- Name of the Category selected -->
-            <ul class="list-group">
-                @foreach (var item in Model.Where(p => p.ProductCategoryID == ViewBag.ID).Select(p => p.ProductSubcategories).ToList().FirstOrDefault())
-                {
-                    @Html.ActionLink(item.Name, "Product/" + item.ProductSubcategoryID, new { controller = "Product" }, new { @class = "btn" })
-                }
-            </ul>
-        }
     </div>
-</div>
-
-
+</body>

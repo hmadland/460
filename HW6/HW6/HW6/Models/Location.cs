@@ -1,4 +1,4 @@
-namespace HW6
+namespace HW6.Models
 {
     using System;
     using System.Collections.Generic;
