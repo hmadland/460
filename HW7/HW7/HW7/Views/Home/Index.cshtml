@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+    <center><h1>Search Gifs</h1></center>
+
+    <div id="main_container">
+        <!-- Div to contian Inputs Form -->
+        <div class="row text-center">
+            <div class="col-md-12">
+                <form method="post">
+                    <!--user input-->
+                    <input class="form-control, text-center" id="userQuery" name="userQuery" type="text" />
+                    <!-- Submit Button-->
+                    <input class="btn btn-danger" type="button" id="search" name="search" value="Search" />
+                </form>
+            </div>
+        </div>
+        <!-- Div to contain outputs of images -->
+        <div class="row text-center" id="results"></div>
+        </div>
+
+        
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/Giphy.js"></script>
+}
+   
+
+

@@ -162,7 +162,6 @@ My IndividualProduct View showed users the product image, along with details suc
 It also gave users an option to write an review or view past reviews of the product.
 
 ```bash
-
 @model HW6.Models.Product
 @{
     ViewBag.Title = "IndividualProduct";
@@ -243,6 +242,7 @@ It also gave users an option to write an review or view past reviews of the prod
     </div>
 </body>
 ```
+
 The controller method for IndividualProduct was this
 ```bash
 public ActionResult IndividualProduct(int? id)

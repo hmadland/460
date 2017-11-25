@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ActionName</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Routing</h2>
+                <div><h3>The controller is: <span class="alert-info">@ViewBag.Controller</span></h3></div>
+                <div><h3>The action is: <span class="alert-success">@ViewBag.Action</span></h3></div>
+                <div><h3>Query strings: <span class="alert-link">@ViewBag.QueryStrings</span></h3></div>
+                <div><h3>Requested URL: <span class="alert-link">@ViewBag.Url</span></h3></div>
+
+            </div>
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Route Pattern</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in ViewBag.RouteData)
+                        {
+                            <tr>
+                                <td><em>@i.Key</em></td>
+                                <td><code>@i.Value</code></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
