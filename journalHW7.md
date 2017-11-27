@@ -4,7 +4,6 @@ layout: default
 ---
 ## Homework 7
 This assignment asked us to create a web page that used Javascript and asynchronous calls to a web server to create a responsive single page application. The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW7.html).
-Overall Requirements:
 
 ## Step One:
 The first step was creating a simple view with a form for user input.
