@@ -204,6 +204,7 @@
     <Content Include="Views\Home\Artworks.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Classifications.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

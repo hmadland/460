@@ -18,18 +18,21 @@ namespace HW8.Models
 
         [Required]
         [StringLength(128)]
-        [Display(Name = "")]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
         [Required]
         [StringLength(128)]
+        [Display(Name = "Birth City")]
         public string BirthCity { get; set; }
 
         [Required]
         [StringLength(128)]
+        [Display(Name = "Birth Country")]
         public string BirthCountry { get; set; }
 
         [Column(TypeName = "date")]
+        [Display(Name = "Date of Birth")]
         public DateTime? DOB { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

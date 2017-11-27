@@ -2,8 +2,6 @@
 @{
     ViewBag.Title = "Artists";
 }
-<h2>Featured Artists</h2>
-
 
 <table class="table">
     <tr>
@@ -23,3 +21,7 @@
     }
 
 </table>
+
+<div class="btn-group">
+    @Html.ActionLink("Add an Artist", "Create", "Home", null, new { @class = "btn btn-default" })
+</div>
