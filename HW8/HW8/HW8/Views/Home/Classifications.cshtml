@@ -1,0 +1,31 @@
+﻿@model IEnumerable<HW8.Models.Classification>
+@{
+    ViewBag.Title = "Classifications";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Artwork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artwork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HW8.Models.Artist>
+@{
+    ViewBag.Title = "Artists";
+}
+<h2>Featured Artists</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+       
+        </tr>
+    }
+
+</table>
