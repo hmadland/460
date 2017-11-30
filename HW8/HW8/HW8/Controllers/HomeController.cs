@@ -6,20 +6,39 @@ using System.Web.Mvc;
 using HW8.Models;
 using System.Net;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace HW8.Controllers
 {
     public class HomeController : Controller
     {
-       private HW8Model db = new HW8Model();
+      private HW8Model db = new HW8Model();
 
 
-            public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View();
+            var genreCat = db.Genres;
+            if (id != null && db.Genres.Find(id) != null)
+            {
+                ViewBag.ID = id;
+            }
+            return View(genreCat);
         }
 
-       //list Artists
+        public ActionResult JasonResult(int? id) 
+        {
+                var results = db.Genres.Where(x => x.GenreID == id) //where GenreID matches button clicked
+                                 .Select(x => x.Classifications)    //selected from Classifications
+                                 .First()
+                                 //from virtual ArtWork1 get artist and title
+                                 .Select(x => new { x.ArtWork1.Artist, x.ArtWork1.Title }) 
+                                 .OrderBy(x => x.Title)
+                                 .ToList();
+                //return Json object
+                return Json(results, JsonRequestBehavior.AllowGet);
+        }
+    
+        //list Artists
         public ActionResult Artists()
         {
             return View(db.Artists.ToList());
@@ -31,7 +50,7 @@ namespace HW8.Controllers
             return View();
         }
 
-        //POST artists
+        //POST Artists
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ArtistID, FullName, DOB, BirthCity, BirthCountry")] Artist artist)
@@ -46,7 +65,7 @@ namespace HW8.Controllers
             return View(artist);
         }
 
-        // GET: Users/Details/5
+        // GET: Artist/Details
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -61,27 +80,7 @@ namespace HW8.Controllers
             return View(artist);
         }
 
-        //get artist details
-        public ActionResult etails(int? id)
-        {
-            // if product id wasn't given
-            if (id == null)
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-
-            var artist = db.Artists.Find(id);
-            //var work = db.ArtWorks.Find( id);
-          
-            ViewBag.FullName = artist.FullName;
-            ViewBag.DOB = artist.DOB;
-            ViewBag.city = artist.BirthCity;
-            ViewBag.counry = artist.BirthCountry;
-            //ViewBag.work = work.ArtistID == id;
-            var Artwork = db.ArtWorks.Where(c =>c.ArtistID ==id).Select(c => c.Title);
-            //ViewBag.Artwork = work;
-            return View();
-        }
-
-
+      
         // GET: Artists/Edit/
         public ActionResult Edit(int? id)
         {
@@ -100,7 +99,7 @@ namespace HW8.Controllers
         // POST: Artists/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ArtistID,FullName,DOB,BirthCity, BirthCountry ")] Artist artist)
+        public ActionResult Edit([Bind(Include = "ArtistID, FullName, DOB, BirthCity, BirthCountry")] Artist artist)
         {
             if (ModelState.IsValid)
             {
@@ -127,7 +126,7 @@ namespace HW8.Controllers
             return View(artist);
         }
 
-        // POST: Users/Delete/5
+        // POST: Artist/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -148,6 +147,24 @@ namespace HW8.Controllers
         public ActionResult Classifications()
         {
             return View(db.Classifications.ToList());
+        }
+    }
+
+    //PastDateAttribute so DOB can't be in future
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+    public class PastDateAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext context)
+        {
+            DateTime? dateValue = value as DateTime?;
+            if (dateValue != null)
+            {
+                if (dateValue.Value.Date > DateTime.UtcNow.Date)
+                {
+                    return new ValidationResult("Not a valid Date");
+                }
+            }
+            return ValidationResult.Success;
         }
     }
 }

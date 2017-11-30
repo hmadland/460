@@ -5,6 +5,7 @@ namespace HW8.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using HW8.Controllers;
 
     public partial class Artist
     {
@@ -17,7 +18,8 @@ namespace HW8.Models
         public int ArtistID { get; set; }
 
         [Required]
-        [StringLength(128)]
+        [StringLength(50)]
+        [MaxLength]
         [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
@@ -31,11 +33,15 @@ namespace HW8.Models
         [Display(Name = "Birth Country")]
         public string BirthCountry { get; set; }
 
+        [Required]
+        [PastDate]
         [Column(TypeName = "date")]
         [Display(Name = "Date of Birth")]
         public DateTime? DOB { get; set; }
-
+            
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ArtWork> ArtWorks { get; set; }
+
+
     }
 }

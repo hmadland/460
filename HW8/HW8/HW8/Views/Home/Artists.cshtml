@@ -2,14 +2,12 @@
 @{
     ViewBag.Title = "Artists";
 }
-
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FullName)
         </th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
@@ -17,7 +15,7 @@
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
 
-            <!---links to details edit and delete pages and controller-->
+            <!---links to details, edit, and delete pages and controller-->
             <td>
             @Html.ActionLink("Details", "Details", new { id = item.ArtistID })
             </td>
@@ -27,12 +25,9 @@
             <td>
             @Html.ActionLink("Delete", "Delete", new { id = item.ArtistID })
             </td>
-       
         </tr>
     }
-
 </table>
-
 <div class="btn-group">
-    @Html.ActionLink("Add an Artist", "Create", "Home", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Add an Artist", "Create", "Home", null, new { @class = "btn btn-lg" })
 </div>

@@ -51,13 +51,13 @@ INSERT INTO dbo.Artists (FullName, DOB, BirthCity, BirthCountry) VALUES
 	('Salvador Dali', '1904-05-11 00:00:00', 'Figueres','Spain');
 GO
 
-INSERT INTO dbo.ArtWorks (Title, Artist) VALUES 
-	('Circle Limit III','M.C. Escher'),
-    ('Twon Tree','M.C. Escher'),
-	('Mona Lisa','Leonardo Da Vinci'),
-	('The Vitruvian Man','Leonardo Da Vinci'),
-	('Ebru','Hatip Mehmed Efendi'),
-	('Honey Is Sweeter Than Blood','Salvador Dali');
+INSERT INTO dbo.ArtWorks (Title, Artist, ArtistID) VALUES 
+	('Circle Limit III','M.C. Escher', '17'),
+    ('Twon Tree','M.C. Escher', '17'),
+	('Mona Lisa','Leonardo Da Vinci', '18'),
+	('The Vitruvian Man','Leonardo Da Vinci', '18'),
+	('Ebru','Hatip Mehmed Efendi', '19'),
+	('Honey Is Sweeter Than Blood','Salvador Dali','20');
 GO
 
 INSERT INTO dbo.Genres(GName) VALUES 
@@ -67,13 +67,13 @@ INSERT INTO dbo.Genres(GName) VALUES
 	('Renaissance');
 GO
 
-INSERT INTO dbo.Classifications(Artwork, Genre) VALUES 
-	('Circle Limit III','Tesselation'),
-    ('Twon Tree','Tesselation'),
-	('Twon Tree','Surrealism'),
-	('Mona Lisa','Portrait'),
-	('Mona Lisa','Renaissance'),
-	('The Vitruvian Man','Renaissance'),
-	('Ebru','Tesselation'),
-	('Honey Is Sweeter Than Blood','Surrealism');
+INSERT INTO dbo.Classifications(Artwork, Genre, ArtWorkID, GenreID) VALUES 
+	('Circle Limit III','Tesselation', '1','1'),
+    ('Twon Tree','Tesselation', '2','1'),
+	('Twon Tree','Surrealism', '2', '2'),
+	('Mona Lisa','Portrait', '3', '3'),
+	('Mona Lisa','Renaissance','3', '4'),
+	('The Vitruvian Man','Renaissance', '4', '4'),
+	('Ebru','Tesselation','11', '1'),
+	('Honey Is Sweeter Than Blood','Surrealism','12', '2');
 GO
