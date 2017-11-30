@@ -77,14 +77,13 @@ Next I added a menu item to the shared layout so the user could select one of th
 </div>
 ```
 Before consturucting the Views I auto generated the models by
-models->
+models ->
 add ->
 ADO.Net Entity Data Model ->
 Code first from DB (give it a name)->
 Tables ->
 Finish
-(In controller add "private (name) db= new (name)();"
-private HW8Model db = new HW8Model();)
+(In controller add "private (name) db= new (name)();" or private HW8Model db = new HW8Model();)
 
 After that I constructed the views so that each showed all the information from their respective tables.
 Artist View:
