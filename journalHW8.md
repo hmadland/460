@@ -8,7 +8,8 @@ The assignment instructions can be found [here](http://www.wou.edu/~morses/class
 
 ## Step One:
 First off I created a new MVC app and HW8feature branch. After getting the project on a new branch I added a database and did a rough sketch of the ER diagram for the tables.
-##add ER
+Below are some example results after a search was performed
+![](img/HW8ER.PNG?raw=true)
 
 Once I had a basic idea of what the tables should contain I built them, used the seed data provided and saved the query in my UpSQL. I did have to change the DOB datatype to Date instead of datetime because it didn't like the years being so far in the past.
 
