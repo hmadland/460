@@ -106,7 +106,8 @@ Link to all other Views [here](https://github.com/hmadland/460/tree/master/HW8/H
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
-            <!---links to details edit and delete pages and controller-->
+
+            <!---links to details, edit, and delete pages and controller-->
             <td>
             @Html.ActionLink("Details", "Details", new { id = item.ArtistID })
             </td>
@@ -120,10 +121,11 @@ Link to all other Views [here](https://github.com/hmadland/460/tree/master/HW8/H
     }
 </table>
 <div class="btn-group">
-    @Html.ActionLink("Add an Artist", "Create", "Home", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Add an Artist", "Create", "Home", null, new { @class = "btn btn-lg" })
 </div>
+
 ```
-Once the basic views were created I commited to my feature branch and pusehd to github.
+Once the basic views were created I committed to my feature branch and pushed to github.
 
 ## Step three
 Next I implement CRUD functionality for Artists.
@@ -168,7 +170,7 @@ an add new artist page (Create),
         </div>
         <div class="form-group">
             <div>
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-lg" />
             </div>
         </div>
     </div>
@@ -176,6 +178,7 @@ an add new artist page (Create),
 <div>
     @Html.ActionLink("Back", "Artists")
 </div>
+
 ```
 an artist Details page (Read)
 ```bash
@@ -229,9 +232,12 @@ an artists Edit page (Update)
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+
         <div class="form-horizontal">
+
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.ArtistID)
+
             <div class="form-group">
                 @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -239,6 +245,7 @@ an artists Edit page (Update)
                     @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
                 </div>
             </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.DOB, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -247,6 +254,7 @@ an artists Edit page (Update)
                     @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
                 </div>
             </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.BirthCity, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -254,6 +262,7 @@ an artists Edit page (Update)
                     @Html.ValidationMessageFor(model => model.BirthCity, "", new { @class = "text-danger" })
                 </div>
             </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.BirthCountry, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -261,9 +270,10 @@ an artists Edit page (Update)
                     @Html.ValidationMessageFor(model => model.BirthCountry, "", new { @class = "text-danger" })
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
+                    <input type="submit" value="Save" class="btn btn-lg" />
                 </div>
             </div>
         </div>
@@ -311,12 +321,14 @@ and an artist Delete page (Delete)
         <dd>
             @Html.DisplayFor(model => model.BirthCountry)
         </dd>
+
     </dl>
+
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" />
+            <input type="submit" value="Delete" class="btn btn-lg" />
         </div>
         <br/>
         <div>@Html.ActionLink("Back", "Artists")</div>
@@ -335,9 +347,192 @@ Next I added the Genre buttons to the home page with a Razor foreach loop
 ```
 Ajax to get the title and artist name.
 ```bash
-
+function buttonClicked(gid) {
+    $('#results').empty();
+    $.ajax({
+        type: "POST",
+        url: "/Home/JasonResult/",
+        data: {id:gid}, //define id as gid to use in controller
+        dataType: "json",
+        success: function (data) {
+            $.each(data, function (i, item) {
+                $("#results").append("<li>" + "<strong>" + item["Artist"] + ": " + "</strong>" + item["Title"] + "</li>");  
+            });
+        }
+    })
+};
 ```
-
+HomeController
 ```bash
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using HW8.Models;
+using System.Net;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
+
+namespace HW8.Controllers
+{
+    public class HomeController : Controller
+    {
+      private HW8Model db = new HW8Model();
+
+
+        public ActionResult Index(int? id)
+        {
+            var genreCat = db.Genres;
+            if (id != null && db.Genres.Find(id) != null)
+            {
+                ViewBag.ID = id;
+            }
+            return View(genreCat);
+        }
+
+        public ActionResult JasonResult(int? id)
+        {
+                var results = db.Genres.Where(x => x.GenreID == id) //where GenreID matches button clicked
+                                 .Select(x => x.Classifications)    //selected from Classifications
+                                 .First()
+                                 //from virtual ArtWork1 get artist and title
+                                 .Select(x => new { x.ArtWork1.Artist, x.ArtWork1.Title })
+                                 .OrderBy(x => x.Title)
+                                 .ToList();
+                //return Json object
+                return Json(results, JsonRequestBehavior.AllowGet);
+        }
+
+        //list Artists
+        public ActionResult Artists()
+        {
+            return View(db.Artists.ToList());
+        }
+
+        //GET Artists
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //POST Artists
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ArtistID, FullName, DOB, BirthCity, BirthCountry")] Artist artist)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Artists.Add(artist);
+                db.SaveChanges();
+                return RedirectToAction("Artists");
+            }
+
+            return View(artist);
+        }
+
+        // GET: Artist/Details
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Artist artist = db.Artists.Find(id);
+            if (artist == null)
+            {
+                return HttpNotFound();
+            }
+            return View(artist);
+        }
+
+
+        // GET: Artists/Edit/
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Artist artist = db.Artists.Find(id);
+            if (artist == null)
+            {
+                return HttpNotFound();
+            }
+            return View(artist);
+        }
+
+        // POST: Artists/Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ArtistID, FullName, DOB, BirthCity, BirthCountry")] Artist artist)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(artist).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Artists");
+            }
+            return View(artist);
+        }
+
+
+        // GET: Artists/Delete
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Artist artist = db.Artists.Find(id);
+            if (artist == null)
+            {
+                return HttpNotFound();
+            }
+            return View(artist);
+        }
+
+        // POST: Artist/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Artist artist = db.Artists.Find(id);
+            db.Artists.Remove(artist);
+            db.SaveChanges();
+            return RedirectToAction("Artists");
+        }
+
+        //list Artworks
+        public ActionResult ArtWorks()
+        {
+            return View(db.ArtWorks.ToList());
+        }
+
+        //list Classifications
+        public ActionResult Classifications()
+        {
+            return View(db.Classifications.ToList());
+        }
+    }
+
+    //PastDateAttribute so DOB can't be in future
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+    public class PastDateAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext context)
+        {
+            DateTime? dateValue = value as DateTime?;
+            if (dateValue != null)
+            {
+                if (dateValue.Value.Date > DateTime.UtcNow.Date)
+                {
+                    return new ValidationResult("Not a valid Date");
+                }
+            }
+            return ValidationResult.Success;
+        }
+    }
+}
 
 ```
