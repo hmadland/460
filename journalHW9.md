@@ -37,9 +37,9 @@ Then I created a web app on Azure
 3. Select Web App
 4. Create
 5. Fill out the form using
- .existing resource group
- .Create app service plan
- .Create
+  .existing resource group
+    .Create app service plan
+    .Create
 
 Then I went back to visual studios and in my project to deploy
 1. Click on project name hit publish
