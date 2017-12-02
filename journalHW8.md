@@ -535,3 +535,7 @@ namespace HW8.Controllers
 }
 
 ```
+Finished pages
+![](img/HW8ajax1.PNG?raw=true)
+
+![](img/HW8ajax2.PNG?raw=true)
