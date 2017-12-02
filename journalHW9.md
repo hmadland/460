@@ -18,9 +18,9 @@ To do this:
 1. Go to SQL databases
 2. Add
 3. Fill out the form
- .selecting resource group you created
- .set pricing to basic
- .Create
+ 4. selecting resource group you created
+ 5. set pricing to basic
+ 6. Create
 ![](img/testing1.PNG?raw=true)
 4. Once the db was up I clicked on it and set server firewall
 ![](img/testing2.PNG?raw=true)
@@ -37,9 +37,9 @@ Then I created a web app on Azure
 3. Select Web App
 4. Create
 5. Fill out the form using
-  .existing resource group
-    .Create app service plan
-    .Create
+  6. existing resource group
+  7. Create app service plan
+  8. Create
 
 Then I went back to visual studios and in my project to deploy
 1. Click on project name hit publish
