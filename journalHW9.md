@@ -70,3 +70,5 @@ Then you're done!
 ![](img/testing8.PNG?raw=true)
 ![](img/testing9.PNG?raw=true)
 ![](img/testing10.PNG?raw=true)
+
+I am having some difficulty getting the genre buttons to work properly in Azure, but they do work locally
