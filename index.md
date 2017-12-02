@@ -20,4 +20,4 @@ Software Engineering I (CS 460): Homework
 * [Homework 6:](https://hmadland.github.io/460/journalHW6.html) LINQ, pre-existing database
 * [Homework 7:](https://hmadland.github.io/460/journalHW7.html) AJAX single page app
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html) AJAX, DB, CRUD, Multi-page app
-* [Homework 9:](https://hmadland.github.io/460/journalHW9.html)
+* [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure

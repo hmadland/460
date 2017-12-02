@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<h1>Welcome To The Artist Lookup</h1>
 
+<h1>Welcome To The Artist Lookup</h1>
 
     @foreach (var genre in Model.ToList())
     {
@@ -17,5 +17,7 @@
 
 @section scripts
 {
+   
     <script type="text/javascript" src="~/Scripts/ajax.js"></script>
-}
+
+} 
