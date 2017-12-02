@@ -6,6 +6,8 @@ layout: default
 For assignment 9 we were asked to publish our HW8 to the Cloud using Azure
 The assignment instructions can be found [here](http://www.wou.edu/~morses/classes/cs46x/assignments/HW9.html).
 
+[Hannah's Azure site](http://hw9.azurewebsites.net/)
+
 The first thing I did after setting up an account on Azure was set up the resource group.
 To do this:
 1. Go to Resource Groups
