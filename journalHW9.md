@@ -31,7 +31,7 @@ After that I went to SQL Server Management Studio
 1. Pasted the server name from the db in Azure
 2. filled in user and password and connected
 3. then I ran a new query and took my upSQL from HW8
-![](img/testing3.PNG?raw=true)
+![](img/HW9stuff.PNG?raw=true)
 
 Then I created a web app on Azure
 1. Go to App Services
@@ -68,7 +68,9 @@ Back in Visual Studio go to Web.Config
 
 Then you're done!
 ![](img/testing8.PNG?raw=true)
+![](img/HW9working.PNG?raw=true)
 ![](img/testing9.PNG?raw=true)
 ![](img/testing10.PNG?raw=true)
 
-I am having some difficulty getting the genre buttons to work properly in Azure, but they do work locally
+I did having some difficulty getting the genre buttons to work properly in Azure, but it turned out to be a problem with my upSQL.
+It was not correctly inputting the foreign keys.

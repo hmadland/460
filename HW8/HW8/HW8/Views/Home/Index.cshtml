@@ -1,23 +1,24 @@
 ﻿
 @model  IEnumerable<HW8.Models.Genre>
+
+
 @{
     ViewBag.Title = "Home Page";
 }
 
 <h1>Welcome To The Artist Lookup</h1>
 
-    @foreach (var genre in Model.ToList())
-    {
-        <input class="btn btn-lg" type="button" value=@genre.GName onclick="buttonClicked('@genre.GenreID')"/>
-    }
-<br/>
-<br/>
-     <!--where ajax results will be put-->
-    <div class="row" id="results"></div>
-
-@section scripts
+@foreach (var genre in Model.ToList())
 {
-   
-    <script type="text/javascript" src="~/Scripts/ajax.js"></script>
+    <input class="btn btn-lg" type="button" value=@genre.GName onclick="buttonClicked('@genre.GenreID')" />
+}
+<br />
+<br />
 
-} 
+<!--where ajax results will be put-->
+<div class="row" id="results"></div>
+
+@section PageScript
+{
+    <script type="text/javascript" src="~/Scripts/ajax.js"></script>
+}
