@@ -58,7 +58,7 @@ After this I went back to Azure to connect the my db to my web app.
 4. Go to App Services click on your web app
 5. Go to Application Settings
 6. Scroll down to connection strings
-7. In the Name type the context file that interacts with the db in your local project
+7. In the Name type whatever you named the db in azure.
 8. In the Value past in the connection string and add in your user_name and password
 9. Click save
 
