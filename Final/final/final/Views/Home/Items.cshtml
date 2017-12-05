@@ -1,0 +1,42 @@
+﻿@model IEnumerable<final.Models.Item>
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ItemDescription)
+            </td>
+
+
+            <!---links to details, edit, and delete pages and controller-->
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ItemID })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ItemID })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
+            </td>
+        </tr>
+    }
+</table>
+<div class="btn-group">
+    @Html.ActionLink("Add Item", "Create", "Home", null, new { @class = "btn btn-lg" })
+</div>
