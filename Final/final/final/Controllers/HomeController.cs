@@ -122,7 +122,36 @@ namespace final.Controllers
         }
 
 
+        //GET bid
+        public ActionResult CreateBid()
+        {
+            return View();
+        }
+
+        //POST bid
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateBid([Bind(Include = "ItemID, BuyerName, Price, BidTime")] Bid bid)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Bids.Add(bid);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(bid);
+        }
 
 
+        public JsonResult GetBids(int? id)
+        {
+            var results = db.Bids.Where(x => x.ItemID == id) //where GenreID matches button clicked
+                                 .Select(x => new { x.Price, x.Buyer.BuyerName })
+                                 .OrderBy(x => x.Price)
+                                 .ToList();
+            //return Json object
+            return Json(results, JsonRequestBehavior.AllowGet);
+        }
     }
 }

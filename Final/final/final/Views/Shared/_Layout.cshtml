@@ -6,8 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <!--where you add styles-->
-   <!--- <link href="~/Content/new.css" rel="stylesheet" type="text/css" />-->
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,7 +22,6 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Items", "Items", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -42,5 +39,6 @@
     @RenderSection("scripts", required: false)
 
     <!--where you ad the pagescripts stuff-->
+    @RenderSection("PageScript", required: false)
 </body>
 </html>
