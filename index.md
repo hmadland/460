@@ -23,10 +23,12 @@ Software Engineering I (CS 460): Homework
 * [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure
 
 Software Engineering II (CS461): Homework
-* [Milestone 1:] () Group formation
-* [Milestone 2:]
-* [Milestone 3:]
-* [Milestone 4:]
-* [Milestone 6:]
-* [Milestone 7:]
-* [Milestone 8:]
+* [Milestone 1:](https://hmadland.github.io/460/milestone1.html) Group Formation
+* [Milestone 2:](https://hmadland.github.io/460/milestone2.html)
+* [Milestone 3:](https://hmadland.github.io/460/milestone3.html)
+* [Milestone 4:](https://hmadland.github.io/460/milestone4.html)
+* [Milestone 5:](https://hmadland.github.io/460/milestone5.html)
+* [Milestone 6:](https://hmadland.github.io/460/milestone6.html)
+* [Milestone 7:](https://hmadland.github.io/460/milestone7.html)
+* [Milestone 8:](https://hmadland.github.io/460/milestone8.html)
+* [Milestone9:](https://hmadland.github.io/460/milestone9.html)
