@@ -31,4 +31,4 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 6:](https://hmadland.github.io/460/milestone6.html)
 * [Milestone 7:](https://hmadland.github.io/460/milestone7.html)
 * [Milestone 8:](https://hmadland.github.io/460/milestone8.html)
-* [Milestone9:](https://hmadland.github.io/460/milestone9.html)
+* [Milestone 9:](https://hmadland.github.io/460/milestone9.html)
