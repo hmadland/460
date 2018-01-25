@@ -9,7 +9,7 @@ I'm a senior at WOU majoring in Computer Science.
 This Portfolio is part of the Senior Project, a year-long Software Engineering course (CS  [460](http://www.wou.edu/~morses/classes/cs46x/index.html), 461 and 462).
 
 ### Code Repository
-All the code seen here can be found in the [460 repository](https://github.com/hmadland/460)
+All the code seen here can be found in my [repository](https://github.com/hmadland/460)
 
 Software Engineering I (CS 460): Homework
 * [Homework 1:](https://hmadland.github.io/460/journalHW1.html) HTML, Css, Git and Bootstrap
@@ -21,3 +21,12 @@ Software Engineering I (CS 460): Homework
 * [Homework 7:](https://hmadland.github.io/460/journalHW7.html) AJAX single page app
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html) AJAX, DB, CRUD, Multi-page app
 * [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure
+
+Software Engineering II (CS461): Homework
+* [Milestone 1:] () Group formation
+* [Milestone 2:]
+* [Milestone 3:]
+* [Milestone 4:]
+* [Milestone 6:]
+* [Milestone 7:]
+* [Milestone 8:]
