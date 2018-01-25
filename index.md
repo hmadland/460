@@ -11,7 +11,7 @@ This Portfolio is part of the Senior Project, a year-long Software Engineering c
 ### Code Repository
 All the code seen here can be found in my [repository](https://github.com/hmadland/460)
 
-###Software Engineering I (CS 460): Homework
+### Software Engineering I (CS 460): Homework
 * [Homework 1:](https://hmadland.github.io/460/journalHW1.html) HTML, Css, Git and Bootstrap
 * [Homework 2:](https://hmadland.github.io/460/journalHW2.html) Javascript and jQuery
 * [Homework 3:](https://hmadland.github.io/460/journalHW3.html) C# and Visual Studio
@@ -22,7 +22,7 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html) AJAX, DB, CRUD, Multi-page app
 * [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure
 
-###Software Engineering II (CS461): Homework
+### Software Engineering II (CS461): Homework
 * [Milestone 1:](https://hmadland.github.io/460/milestone1.html) Group Formation
 * [Milestone 2:](https://hmadland.github.io/460/milestone2.html)
 * [Milestone 3:](https://hmadland.github.io/460/milestone3.html)
