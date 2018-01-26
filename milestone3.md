@@ -29,7 +29,7 @@ In order to prove the architecture we had to have a hello world site up and cont
 We decided to go with the Assassins or elimination game application and API for our group project.
 
 ## Mindmap:
-![](img/mindmap.PNG?raw=true)
+![](img/mindmap.png?raw=true)
 
 ## vision statement draft:
 
