@@ -34,7 +34,7 @@ support
 ```
 
 * 10 user stories for main features
-```bash 1. As a coach I want to view an individual athlete's performance so that I can make personalized decisions about their future training.
+1. As a coach I want to view an individual athlete's performance so that I can make personalized decisions about their future training.
 
 2. As a coach I want to view all, or some subset, of my athletes performance/training so that I can make general team-wide training decisions.
 
@@ -53,7 +53,7 @@ support
 9. As a parent or guardian of an underage athlete I want to be able to view their profile and stats so that I can check in on them and encourage them.
 
 10. As a coach I want to be able to print or download graphs of performance stats or training plans so that I can reference them.  
-```
+
 
 * Use case diagrams
 ![](img/use-case-diagram.PNG?raw=true)
@@ -73,7 +73,7 @@ For coaches who need to keep record of their athletes overall training and perfo
 
 ## Team Project Ideas Refinement
 
-```bash
+
 Study Buddy App
 
 A study aide for people that would incorporate an AI API to use a chatbot
@@ -94,9 +94,8 @@ We would need a deep learning API like Watson or
 Microsoft Azure Cognitive Services.
 Algorithmic content is the flashcards system.
 We rate it a 7 overall, but really 6-8 depending on how many features we would implement.  
-```
 
-```bash
+
 Police Speed Prevention App
 
 An application for police officers to record and upload incidents of
@@ -108,9 +107,9 @@ Its worth doing because it would increase public safety as well as police revenu
 We would need as machine learning API as well as google maps API.
 The algorithmic content is stuff like making graphs, etc.
 We rate this a 6.
-```
 
-```bash
+
+
 Assassins
 An application to host and manage users (assassins) and games and their rules.
 Individual projects 	would interact with this application to actually play out
@@ -132,6 +131,6 @@ We could use algorithmic content to initially establish who has what target.
 If there are repeat players from past games, their stats could affect how they
 are placed within the circle of Assassins.
 Topic rating: 6?
-```
+
 
 Practice the class Git workflow
