@@ -12,6 +12,7 @@ A local cross country coach has received a grant from Garmin to outfit every mem
 ## Tasks:
 Near the beginning of the week our group met for a few hours and began the inception phase for the class project. We came up with
 * A list of needs and features
+
 ```bash
 Database
 Garmin API
@@ -33,8 +34,7 @@ support
 ```
 
 * 10 user stories for main features
-```bash
-1. As a coach I want to view an individual athlete's performance so that I can make personalized decisions about their future training.
+```bash 1. As a coach I want to view an individual athlete's performance so that I can make personalized decisions about their future training.
 
 2. As a coach I want to view all, or some subset, of my athletes performance/training so that I can make general team-wide training decisions.
 
