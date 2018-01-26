@@ -22,4 +22,4 @@ We were asked to create a
 	2. study aide
 	3. task management tool
 
-All other documents can be found [here](https://bitbucket.org/blakebauer/etprogressus)
+All other documents can be found [here](https://bitbucket.org/blakebauer/etprogressus) in our groups bitbucket repo.
