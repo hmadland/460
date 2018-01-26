@@ -58,7 +58,6 @@ support
 
 * Use case diagrams
 ![](img/use-case-diagram.jpg?raw=true)
-* Preliminary database design/ ER diagram
 
 * Architecture drawing
 ![](img/architecture-diagram.jpg?raw=true)
@@ -74,7 +73,7 @@ For coaches who need to keep record of their athletes overall training and perfo
 
 ## Team Project Ideas Refinement
 
-Study Buddy App
+* Study Buddy App
 
 A study aide for people that would incorporate an AI API to use a chatbot
 to quiz them and flashcards which would use an algorithm to determine how
@@ -96,21 +95,20 @@ Algorithmic content is the flashcards system.
 We rate it a 7 overall, but really 6-8 depending on how many features we would implement.  
 
 
-Police Speed Prevention App
+* Police Speed Prevention App
 
 An application for police officers to record and upload incidents of
 speeding and use machine learning to predict likely areas for repeated
 speeding offences and good places to patrol in order to increase public safety.
 It would be specific to speeding (for now). There are programs already like this,
-but are more generalized and it sounds like there's no concenssus on whether they work or not.
+but are more generalized and it sounds like there's no consensus on whether they work or not.
 Its worth doing because it would increase public safety as well as police revenue.
 We would need as machine learning API as well as google maps API.
 The algorithmic content is stuff like making graphs, etc.
 We rate this a 6.
 
+* Assassins
 
-
-Assassins
 An application to host and manage users (assassins) and games and their rules.
 Individual projects 	would interact with this application to actually play out
 specific games. A user receives a picture of their target. Their target also has
@@ -133,4 +131,5 @@ are placed within the circle of Assassins.
 Topic rating: 6?
 
 
-Practice the class Git workflow
+## Practice the class Git workflow
+For this we all simply pushed and did a pull request on a few files.
