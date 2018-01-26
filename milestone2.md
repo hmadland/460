@@ -73,7 +73,7 @@ For coaches who need to keep record of their athletes overall training and perfo
 
 ## Team Project Ideas Refinement
 
-* Study Buddy App
+# Study Buddy App
 
 A study aide for people that would incorporate an AI API to use a chatbot
 to quiz them and flashcards which would use an algorithm to determine how
@@ -95,7 +95,7 @@ Algorithmic content is the flashcards system.
 We rate it a 7 overall, but really 6-8 depending on how many features we would implement.  
 
 
-* Police Speed Prevention App
+# Police Speed Prevention App
 
 An application for police officers to record and upload incidents of
 speeding and use machine learning to predict likely areas for repeated
@@ -107,7 +107,7 @@ We would need as machine learning API as well as google maps API.
 The algorithmic content is stuff like making graphs, etc.
 We rate this a 6.
 
-* Assassins
+# Assassins
 
 An application to host and manage users (assassins) and games and their rules.
 Individual projects 	would interact with this application to actually play out
