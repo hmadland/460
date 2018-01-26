@@ -34,6 +34,7 @@ support
 ```
 
 * 10 user stories for main features
+
 1. As a coach I want to view an individual athlete's performance so that I can make personalized decisions about their future training.
 
 2. As a coach I want to view all, or some subset, of my athletes performance/training so that I can make general team-wide training decisions.
@@ -67,12 +68,10 @@ support
 
 
 * Vision Statement
-```bash
 For coaches who need to keep record of their athletes overall training and performance, the Place-Holder-Name is a site that will provided a single point of access to view and monitor the performance of every athlete on the team, thereby allowing the coach to create individualized workouts and group training tailored for the team’s needs. Unlike the websites currently available that track athlete performance, our product will incorporate data gathered from every athlete’s Garmin GPS watch, heart rate monitor, and foot pod, providing such information as distance, splits, time, cadence, heart rate, as well as other metrics based that data.
-```
+
 
 ## Team Project Ideas Refinement
-
 
 Study Buddy App
 
