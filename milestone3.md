@@ -59,7 +59,7 @@ Requirements:
     -Game and player information should be stored using minimal amount of memory to conserve space.
 
 ## Individual Project Ideas
-```bash
+
 Idea						                      Platform		        Language
 Companion app for group project Elimination 	  Native Android	 	Java
 API. The app allows users to access and manage
@@ -81,5 +81,3 @@ House plant identification app. 		  Native Android		Java
 The app uses image recognition to
 identify plant species and return care
 instructions.
-
-```
