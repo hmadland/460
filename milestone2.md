@@ -57,17 +57,18 @@ support
 
 
 * Use case diagrams
-![](img/use-case-diagram.PNG?raw=true)
+![](img/use-case-diagram.jpg?raw=true)
 * Preliminary database design/ ER diagram
 
 * Architecture drawing
-![](img/architecture-diagram.PNG?raw=true)
+![](img/architecture-diagram.jpg?raw=true)
 
 * ER diagram
-![](img/er-diagram.PNG?raw=true)
+![](img/er-diagram.jpg?raw=true)
 
 
 * Vision Statement
+
 For coaches who need to keep record of their athletes overall training and performance, the Place-Holder-Name is a site that will provided a single point of access to view and monitor the performance of every athlete on the team, thereby allowing the coach to create individualized workouts and group training tailored for the team’s needs. Unlike the websites currently available that track athlete performance, our product will incorporate data gathered from every athlete’s Garmin GPS watch, heart rate monitor, and foot pod, providing such information as distance, splits, time, cadence, heart rate, as well as other metrics based that data.
 
 
