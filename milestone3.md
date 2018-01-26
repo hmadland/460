@@ -41,6 +41,8 @@ We decided to go with the Assassins or elimination game application and API for 
 	elimination and also make adding more rules to games easier and more fun.
 
 ## Needs & Features:
+
+```bash
 Needs:
     -Database to store players, player stats, and game information.
     -API that will allow developers to create games based on eliminating other players and building player stats.
@@ -58,26 +60,30 @@ Requirements:
     -Need to use Json when passing data from server to client to decrease bandwith constraints.
     -Game and player information should be stored using minimal amount of memory to conserve space.
 
-## Individual Project Ideas
+```    
 
-Idea						                      Platform		        Language
-Companion app for group project Elimination 	  Native Android	 	Java
+## Individual Project Ideas
+```bash
+Idea		Platform: Native Android      Language: Java				                      
+Companion app for group project Elimination 	  
 API. The app allows users to access and manage
 their account as well as play against other
 users and receive new targets in elimination
 games.  
 
 
-Idea						                Platform		    Language
-Book barcode scanner app.			        Native Android		Java
+Idea		Platform: Native Android      Language: Java
+Book barcode scanner app.			        
 The app allows you to scan a book’s
 barcode and then gives you reviews
 and possibly similar titles.
 Possibly using Goodreads API.
 
 
-Idea						              Platform		        Language
-House plant identification app. 		  Native Android		Java
+Idea		Platform: Native Android      Language: Java
+House plant identification app. 		 
 The app uses image recognition to
 identify plant species and return care
 instructions.
+
+```
