@@ -147,7 +147,7 @@ Bluetooth vulnerability
 For people who want to create and play elimination-based live-action mobile games (like Assassin! or Humans Vs. Zombies), the Elimination Framework and API is an web application (and associated mobile apps) that allows for an admin to make a game and set rules and invite other users to join the game. Elimination-based live action games involve players being assigned other players as targets and then proceeding to attempt to eliminate their target/targets, traditionally with mock-projectiles (like Nerf-guns or balled up socks), by whatever rules are established for the specific game, until either the last player/team is remaining. Unlike current methods for playing elimination-based live-action games, our full website will remove the subjectivity that comes from a human moderator and human players determining a successful elimination and also make adding more rules and features (like player skill modifiers, a player inventory, and methods of elimination) to games easier and more fun. The application will store user accounts, skills, and stats from previous and on-going games, as well as make decisions for furthering current games and setting up new ones.
 
 ## Initial DB Design
-![](img/initial-database-sesign.png?raw=true)
+![](img/initial-database-design.png?raw=true)
 
 ## Architecture Diagram
 ![](img/architecture-diagram.png?raw=true)
