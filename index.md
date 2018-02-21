@@ -22,13 +22,16 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html) AJAX, DB, CRUD, Multi-page app
 * [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure
 
-### Software Engineering II (CS461): Homework
+### Software Engineering II (CS461):
+##Milestone
 * [Milestone 1:](https://hmadland.github.io/460/milestone1.html) Group Formation
 * [Milestone 2:](https://hmadland.github.io/460/milestone2.html) Inception phase activities for class project
 * [Milestone 3:](https://hmadland.github.io/460/milestone3.html) Class project backlog refinement and grooming
 * [Milestone 4:](https://hmadland.github.io/460/milestone4.html) Complete one week Sprint for class project
 * [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
-* [Milestone 6:](https://hmadland.github.io/460/milestone6.html)
-* [Milestone 7:](https://hmadland.github.io/460/milestone7.html)
-* [Milestone 8:](https://hmadland.github.io/460/milestone8.html)
-* [Milestone 9:](https://hmadland.github.io/460/milestone9.html)
+##Individual Project:
+* [Milestone 6:](https://hmadland.github.io/460/milestone6.html) Individual Project inception
+* [Sprint 1:](https://hmadland.github.io/460/Individualsprint1.html) Sprint 1 Individual Project
+##Team Project:
+* [Sprint 1:](https://hmadland.github.io/460/TeamSprint1.html) Sprint 1 Team Project
+* [Sprint 2:](https://hmadland.github.io/460/TeamSprint2.html) Sprint 2 Team Project
