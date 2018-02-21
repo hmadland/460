@@ -21,6 +21,6 @@ so players can use their phones to eliminate their targets.
 * Git repo:
 [Paranoia](https://bitbucket.org/hmadland/paranoia)
 
-## Individual Project: Preparation for Sprint 1
+## Individual Project: Sprint 1 prep
 * Epics/Features/User Stories
 * Sprint 1 planning
