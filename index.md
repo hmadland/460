@@ -27,7 +27,7 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 2:](https://hmadland.github.io/460/milestone2.html) Inception phase activities for class project
 * [Milestone 3:](https://hmadland.github.io/460/milestone3.html) Class project backlog refinement and grooming
 * [Milestone 4:](https://hmadland.github.io/460/milestone4.html) Complete one week Sprint for class project
-* [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception and class project retrospective
+* [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
 * [Milestone 6:](https://hmadland.github.io/460/milestone6.html)
 * [Milestone 7:](https://hmadland.github.io/460/milestone7.html)
 * [Milestone 8:](https://hmadland.github.io/460/milestone8.html)
