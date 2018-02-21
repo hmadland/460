@@ -17,14 +17,14 @@ We were instructed to spend some "quality time" working with our group to expand
 
 ### Needs, Features and Requirements
 
-#### Needs
+### Needs:
 API that will allow developers to create games based on eliminating other players and building player stats
 Database to store players, player stats, and game information
 Developers to create games to test
 Web App to manage the game
 Players to make accounts and manage them
 
-#### Features
+### Features:
 Player Creation:
 * Profile Management
 * Bio
@@ -125,13 +125,13 @@ Global Settings/Rules
 * Item-Drop Rules: Manual or random location, frequency, accessibility duration, visible or mystery items, coins
 * Location Check-in Rules: Accessibility duration, required or optional, penalty for missing
 
-#### Requirements
+### Requirements:
 Non-functional
 Json needs to be used when passing data from server to client to decrease bandwidth constraints.
 Game and player information should be stored safely using min amount of memory to conserve space and cost.
 
 
-#### Identification of Risks
+### Identification of Risks:
 Photo-Recognition
 It may be too difficult to implement or it may not be accurate enough to work. It also may be to slow and ruin the immersion.
 A player could possibly cheat this system by taking a picture of a picture or resend a previously taken photo the resulted in a successful elimination.
@@ -143,7 +143,7 @@ There may be misunderstandings that we could be held liable for...
 Security
 Bluetooth vulnerability
 
-#### Final Vision Statement
+### Final Vision Statement:
 For people who want to create and play elimination-based live-action mobile games (like Assassin! or Humans Vs. Zombies), the Elimination Framework and API is an web application (and associated mobile apps) that allows for an admin to make a game and set rules and invite other users to join the game. Elimination-based live action games involve players being assigned other players as targets and then proceeding to attempt to eliminate their target/targets, traditionally with mock-projectiles (like Nerf-guns or balled up socks), by whatever rules are established for the specific game, until either the last player/team is remaining. Unlike current methods for playing elimination-based live-action games, our full website will remove the subjectivity that comes from a human moderator and human players determining a successful elimination and also make adding more rules and features (like player skill modifiers, a player inventory, and methods of elimination) to games easier and more fun. The application will store user accounts, skills, and stats from previous and on-going games, as well as make decisions for furthering current games and setting up new ones.
 
 ## Initial DB Design
