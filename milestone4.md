@@ -8,7 +8,7 @@ The assignment instructions can be found [here](http://www.wou.edu/~morses/class
 
 All other documents can be found [here](https://bitbucket.org/blakebauer/etprogressus) in our groups bitbucket repo.
 
-## One full iteration of class project
+## Iteration of class project
 Our group groomed our backlog and assigned tasks to each member to add features and functionality to our XC team site.
 I worked on adding drop downs to the athlete view allowing users to filter athletes by team, or DOB.
 
