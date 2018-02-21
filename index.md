@@ -38,4 +38,4 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Sprint 1:](https://hmadland.github.io/460/TeamSprint1.html) Sprint 1 Team Project
 * [Sprint 2:](https://hmadland.github.io/460/TeamSprint2.html) Sprint 2 Team Project
 
-#### Software Engineering III (CS462):
+### Software Engineering III (CS462):
