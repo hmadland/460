@@ -17,6 +17,7 @@ I'll be developing an Android app that will use our Elimination Framework API
 so players can use their phones to eliminate their targets.
 
 * Vision statement:
+For people who want to play elimination-based live-action games, the Paranoia App is a mobile application that uses the Elimination API to host, join, and play in elimination-based games as well as updated their profile and view stats. Using image recognition, players will snap pictures of their targets which will be sent to the Elimination Framework for verification and new target assignment. Unlike current methods of playing elimination-based live-action games, Paranoia will remove the subjectivity that comes from a human moderator and human players determining a successful elimination as well as the need to carry around projectiles or physically tagging your target.
 * Initial modeling artifacts:
 * Git repo:
 [Paranoia](https://bitbucket.org/hmadland/paranoia)
