@@ -30,12 +30,10 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 4:](https://hmadland.github.io/460/milestone4.html) Complete one week Sprint for class project
 * [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
 
-#### Individual Project:
-* [Milestone 6:](https://hmadland.github.io/460/milestone6.html) Individual Project inception
-* [Sprint 1:](https://hmadland.github.io/460/Individualsprint1.html) Sprint 1 Individual Project
-
-#### Team Project:
-* [Sprint 1:](https://hmadland.github.io/460/TeamSprint1.html) Sprint 1 Team Project
-* [Sprint 2:](https://hmadland.github.io/460/TeamSprint2.html) Sprint 2 Team Project
 
 ### Software Engineering III (CS462):
+
+* [Individual Project:](https://bitbucket.org/hmadland/paranoia/src/develop/) All code for my individual project can be found here
+
+
+* [Group Project](https://bitbucket.org/hmadland/sneakysoftware/src/develop/) All code for my group project can be found here
