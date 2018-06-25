@@ -7,7 +7,7 @@ This is a Portfolio of some of my software developed within the senior sequence 
 
 ## About Me
 I graduated from Western Oregon University with a B.S. in Computer Science on June 16th 2018. While at Western I worked with C#, ASP.NET MVC5, JavaScript and jQuerry, HTML, CSS, BootStrap,  C++, some Python and Haskell.
-During the CS senior sequence we also dived into agile development methodologies and put them into practice for both our group and individual projects. For my group project, which I worked on with three other student developers, was a web app that helped facilitate live action elimination-based games and used image recognition as a means to eliminate players targets.
+During the CS senior sequence we also dived into agile development methodologies and put them into practice for both our group and individual projects. For my group project, which I worked on with three other student developers, we built a web app that helped facilitate live action elimination-based games and used image recognition as a means to eliminate players targets.
 For my individual project I built an Android app that incorporated my group's API so that players could better utilize our elimination through image recognition capability.
 As far as hobbies go I love reading, hiking, and vegging out on YouTube.
 
