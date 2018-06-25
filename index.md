@@ -15,7 +15,7 @@ As far as hobbies go I love reading, hiking, and vegging out on YouTube.
 ## Code Repository
 All the code seen here can be found in my [repository](https://github.com/hmadland/460)
 
-### Software Engineering I (CS 460): Homework
+## Software Engineering I (CS 460): Homework
 * [Homework 1:](https://hmadland.github.io/460/journalHW1.html) HTML, Css, Git and Bootstrap
 * [Homework 2:](https://hmadland.github.io/460/journalHW2.html) Javascript and jQuery
 * [Homework 3:](https://hmadland.github.io/460/journalHW3.html) C# and Visual Studio
@@ -26,7 +26,7 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Homework 8:](https://hmadland.github.io/460/journalHW8.html) AJAX, DB, CRUD, Multi-page app
 * [Homework 9:](https://hmadland.github.io/460/journalHW9.html) Azure
 
-### Software Engineering II (CS461):
+## Software Engineering II (CS461):
 #### Milestone
 * [Milestone 1:](https://hmadland.github.io/460/milestone1.html) Group Formation
 * [Milestone 2:](https://hmadland.github.io/460/milestone2.html) Inception phase activities for class project
@@ -34,10 +34,11 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 4:](https://hmadland.github.io/460/milestone4.html) Complete one week Sprint for class project
 * [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
 
-### Software Engineering III (CS462):
+## Software Engineering III (CS462):
 * [Individual Project:](https://bitbucket.org/hmadland/paranoia/src/develop/) All code for my individual project can be found here
 
 * [Group Project](https://bitbucket.org/hmadland/sneakysoftware/src/develop/) All code for my group project can be found here
 
-### Personal Projects / Practice Tutorials
+## Personal Projects / Practice Tutorials
 * [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html) Simple MonoGame tutorial project
+* [Django and Python website](https://hmadland.github.io/460/Django.html) Simple MonoGame tutorial project
