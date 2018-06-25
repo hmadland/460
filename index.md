@@ -37,6 +37,4 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Group Project](https://bitbucket.org/hmadland/sneakysoftware/src/develop/) All code for my group project can be found here
 
 ### Personal Projects / Practice Tutorials
-* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
-* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
-* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
+* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html) Simple MonoGame tutorial project
