@@ -30,10 +30,13 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 4:](https://hmadland.github.io/460/milestone4.html) Complete one week Sprint for class project
 * [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
 
-
 ### Software Engineering III (CS462):
 
 * [Individual Project:](https://bitbucket.org/hmadland/paranoia/src/develop/) All code for my individual project can be found here
 
-
 * [Group Project](https://bitbucket.org/hmadland/sneakysoftware/src/develop/) All code for my group project can be found here
+
+### Personal Projects / Practice Tutorials
+* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
+* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
+* [Simple Game in MonoGame 2D:](https://hmadland.github.io/460/MonoGame1.html)
