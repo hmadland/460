@@ -2,11 +2,15 @@
 title: Blogging Like a Hacker
 ---
 ## Welcome to My Portfolio
-This is a Portfolio of some of my software developed within the senior sequence at Western Oregon University.
+This is a Portfolio of some of my software developed within the senior sequence (CS 460, CS 461, CS 462) at Western Oregon University as well as my personal projects, practice tutorials, and other random code I've worked on.
+
 
 ### About Me
-I'm a senior at WOU majoring in Computer Science.
-This Portfolio is part of the Senior Project, a year-long Software Engineering course (CS  [460](http://www.wou.edu/~morses/classes/cs46x/index.html), 461 and 462).
+I graduated from Western Oregon University with a B.S. in Computer Science on June 16th 2018. While at Western I worked with C#, ASP.NET MVC5, JavaScript and jQuerry, HTML, CSS, BootStrap,  C++, some Python and Haskell.
+During the CS senior sequence we also dived into agile development methodologies and put them into practice for both our group and individual projects. For my group project, which I worked on with three other student developers, was a web app that helped facilitate live action elimination-based games and used image recognition as a means to eliminate players targets.
+For my individual project I built an Android app that incorporated my group's API so that players could better utilize our elimination through image recognition capability.
+As far as hobbies go I love reading, hiking, and vegging out on YouTube.
+
 
 ### Code Repository
 All the code seen here can be found in my [repository](https://github.com/hmadland/460)
@@ -31,7 +35,6 @@ All the code seen here can be found in my [repository](https://github.com/hmadla
 * [Milestone 5:](https://hmadland.github.io/460/milestone5.html) Team project inception/class project retrospective
 
 ### Software Engineering III (CS462):
-
 * [Individual Project:](https://bitbucket.org/hmadland/paranoia/src/develop/) All code for my individual project can be found here
 
 * [Group Project](https://bitbucket.org/hmadland/sneakysoftware/src/develop/) All code for my group project can be found here
