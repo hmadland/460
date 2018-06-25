@@ -9,4 +9,4 @@ The [tutorial](https://www.youtube.com/watch?v=FNQxxpM1yOs) walked through the b
 
 
 ### Code Repository
-All the code for the project can be found here [repository](https://github.com/hmadland/460/Django)
+All the code for the project can be found here [repository](https://github.com/hmadland/460/tree/master/Django/mysite)
