@@ -8,4 +8,4 @@ I followed [this](https://www.youtube.com/watch?v=wwcWNyt8Uyk&t=628s) tutorial t
 ![](img/MarioClone3.JPG?raw=true)
 
 ### Code Repository
-All the code can be found in my [repository](https://github.com/hmadland/460/unityGame)
+All the code can be found in my [repository](https://github.com/hmadland/460/tree/master/unityGame/2DGameOne)
